@@ -10,6 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Truck.h"
 
+/*
+ * I'm committed!
+ */
 @interface Truck_Tracker_AppAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, CLLocationManagerDelegate>
 {
 	NSArray			*listContent;			// The master content.
