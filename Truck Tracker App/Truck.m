@@ -14,7 +14,7 @@
 
 
 + (id)truckWithCuisine:(NSString *)cuisine name:(NSString *)name menu:(NSData *)menu 
-              latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude schedule:(NSData *)schedule
+              latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude schedule:(NSString *)schedule
 {
 	Truck *newTruck = [[[self alloc] init] autorelease];
 	newTruck.cuisine = cuisine;

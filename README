@@ -1,10 +1,11 @@
-Hello, this is the README file of the TRUCK APP. 
+I have added a new mock database for the Block Party as well as a mock database for users once I get the login screen working. 
 
-Hi steve.  I'm across from you.  
+I have also revised the number and placement of buttons on the TruckDetailController, and it will be replicated in the BlockPartyDetailController as well. I want fewer buttons for now. If we want to add more we can always apply an update. 
 
-Why hello, Chris. 
-...
-We're both changing…!!!
-...
-Chris, let's be honest. I am the Jedi Master.
+Hopefully by this Thursday I will have successfully implemented:
 
+-Block Party Detail Views just like the Truck Detail Views
+
+-A login view that utilizes the user database
+
+-A way of displaying certain tabs for different types of users (i.e. people vs. truck owners)

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0528DB6414E1964B00BAE4ED /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6214E1964B00BAE4ED /* FavoritesViewController.m */; };
+		0528DB6514E1964B00BAE4ED /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0528DB6314E1964B00BAE4ED /* FavoritesViewController.xib */; };
+		0528DB6814E1993E00BAE4ED /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6714E1993E00BAE4ED /* Person.m */; };
+		0528DB6B14E19E8200BAE4ED /* BlockParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6A14E19E8100BAE4ED /* BlockParty.m */; };
+		0528DB6F14E19FF200BAE4ED /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6D14E19FF000BAE4ED /* LoginViewController.m */; };
+		0528DB7014E19FF200BAE4ED /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0528DB6E14E19FF100BAE4ED /* LoginViewController.xib */; };
 		AA04BDB11434ECDA00B36634 /* TruckDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA04BDAF1434ECDA00B36634 /* TruckDetailViewController.m */; };
 		AA04BDB21434ECDA00B36634 /* TruckDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA04BDB01434ECDA00B36634 /* TruckDetailView.xib */; };
 		AA09D316148813A9000F45A3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA09D315148813A9000F45A3 /* CoreLocation.framework */; };
@@ -36,8 +42,6 @@
 		AA6BBF33146042EE0084813C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6BBF31146042EE0084813C /* MenuViewController.m */; };
 		AA6BBF34146042EE0084813C /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6BBF32146042EE0084813C /* MenuView.xib */; };
 		AA72C1FB148EA849006FC715 /* TruckAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AA72C1FA148EA849006FC715 /* TruckAnnotation.m */; };
-		AA7768F914284AAD00C313B3 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7768F714284AAD00C313B3 /* FavoritesViewController.m */; };
-		AA7768FA14284AAD00C313B3 /* FavoritesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7768F814284AAD00C313B3 /* FavoritesView.xib */; };
 		AA93919D144B877200CC0203 /* TrucksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA93919B144B877200CC0203 /* TrucksViewController.m */; };
 		AA93919E144B877200CC0203 /* TrucksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA93919C144B877200CC0203 /* TrucksView.xib */; };
 		AADA5C1D14604FB000BC977C /* Buttermilk Truck Menu.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AADA5C1C14604FB000BC977C /* Buttermilk Truck Menu.tiff */; };
@@ -60,6 +64,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0528DB6114E1964B00BAE4ED /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoritesViewController.h; path = ../FavoritesViewController.h; sourceTree = "<group>"; };
+		0528DB6214E1964B00BAE4ED /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoritesViewController.m; path = ../FavoritesViewController.m; sourceTree = "<group>"; };
+		0528DB6314E1964B00BAE4ED /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FavoritesViewController.xib; path = ../FavoritesViewController.xib; sourceTree = "<group>"; };
+		0528DB6614E1993D00BAE4ED /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0528DB6714E1993E00BAE4ED /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		0528DB6914E19E8000BAE4ED /* BlockParty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockParty.h; sourceTree = "<group>"; };
+		0528DB6A14E19E8100BAE4ED /* BlockParty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockParty.m; sourceTree = "<group>"; };
+		0528DB6C14E19FF000BAE4ED /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0528DB6D14E19FF000BAE4ED /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0528DB6E14E19FF100BAE4ED /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		AA04BDAE1434ECDA00B36634 /* TruckDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TruckDetailViewController.h; path = ../TruckDetailViewController.h; sourceTree = "<group>"; };
 		AA04BDAF1434ECDA00B36634 /* TruckDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TruckDetailViewController.m; path = ../TruckDetailViewController.m; sourceTree = "<group>"; };
 		AA04BDB01434ECDA00B36634 /* TruckDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TruckDetailView.xib; path = ../TruckDetailView.xib; sourceTree = "<group>"; };
@@ -101,9 +115,6 @@
 		AA6BBF32146042EE0084813C /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuView.xib; path = ../MenuView.xib; sourceTree = "<group>"; };
 		AA72C1F9148EA849006FC715 /* TruckAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TruckAnnotation.h; sourceTree = "<group>"; };
 		AA72C1FA148EA849006FC715 /* TruckAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TruckAnnotation.m; sourceTree = "<group>"; };
-		AA7768F614284AAD00C313B3 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
-		AA7768F714284AAD00C313B3 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
-		AA7768F814284AAD00C313B3 /* FavoritesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesView.xib; sourceTree = "<group>"; };
 		AA93919A144B877200CC0203 /* TrucksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrucksViewController.h; sourceTree = "<group>"; };
 		AA93919B144B877200CC0203 /* TrucksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrucksViewController.m; sourceTree = "<group>"; };
 		AA93919C144B877200CC0203 /* TrucksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrucksView.xib; sourceTree = "<group>"; };
@@ -144,6 +155,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05D7718F14E42B650039113F /* Block Party Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Block Party Group";
+			sourceTree = "<group>";
+		};
+		05D7719114E42C130039113F /* Shared Truck/Block Party Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Shared Truck/Block Party Views";
+			sourceTree = "<group>";
+		};
 		AA0E9673142277E80098338F = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +207,8 @@
 			children = (
 				AA939198144B86AD00CC0203 /* Tab Bar Group */,
 				AA939199144B86F300CC0203 /* Truck Group */,
+				05D7719114E42C130039113F /* Shared Truck/Block Party Views */,
+				05D7718F14E42B650039113F /* Block Party Group */,
 				AA0E9689142277E80098338F /* Supporting Files */,
 			);
 			path = "Truck Tracker App";
@@ -221,6 +248,9 @@
 			isa = PBXGroup;
 			children = (
 				AAE47AF9144766810069BC48 /* MainWindow.xib */,
+				0528DB6C14E19FF000BAE4ED /* LoginViewController.h */,
+				0528DB6D14E19FF000BAE4ED /* LoginViewController.m */,
+				0528DB6E14E19FF100BAE4ED /* LoginViewController.xib */,
 				AA0E9691142277E80098338F /* Truck_Tracker_AppAppDelegate.h */,
 				AA0E9692142277E80098338F /* Truck_Tracker_AppAppDelegate.m */,
 				AA93919A144B877200CC0203 /* TrucksViewController.h */,
@@ -232,11 +262,17 @@
 				AA0E96C2142279960098338F /* BlockPartyViewController.h */,
 				AA0E96C3142279960098338F /* BlockPartyViewController.m */,
 				AA0E96C4142279960098338F /* BlockPartyView.xib */,
-				AA7768F614284AAD00C313B3 /* FavoritesViewController.h */,
-				AA7768F714284AAD00C313B3 /* FavoritesViewController.m */,
-				AA7768F814284AAD00C313B3 /* FavoritesView.xib */,
+				0528DB6114E1964B00BAE4ED /* FavoritesViewController.h */,
+				0528DB6214E1964B00BAE4ED /* FavoritesViewController.m */,
+				0528DB6314E1964B00BAE4ED /* FavoritesViewController.xib */,
 				AA72C1F9148EA849006FC715 /* TruckAnnotation.h */,
 				AA72C1FA148EA849006FC715 /* TruckAnnotation.m */,
+				AA4CF12914291988003FF4A2 /* Truck.h */,
+				AA4CF12A14291988003FF4A2 /* Truck.m */,
+				0528DB6614E1993D00BAE4ED /* Person.h */,
+				0528DB6714E1993E00BAE4ED /* Person.m */,
+				0528DB6914E19E8000BAE4ED /* BlockParty.h */,
+				0528DB6A14E19E8100BAE4ED /* BlockParty.m */,
 			);
 			name = "Tab Bar Group";
 			sourceTree = "<group>";
@@ -263,8 +299,6 @@
 				AADA5C221460776000BC977C /* Lobsta Truck Menu.tiff */,
 				AA2EE2F9147569AC0023BDA0 /* Westside Schedule.tiff */,
 				AAE47B0014476E1A0069BC48 /* 9489633.jpg */,
-				AA4CF12914291988003FF4A2 /* Truck.h */,
-				AA4CF12A14291988003FF4A2 /* Truck.m */,
 			);
 			name = "Truck Group";
 			sourceTree = "<group>";
@@ -314,7 +348,7 @@
 		AA0E9675142277E80098338F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Parthenon Productions";
 			};
 			buildConfigurationList = AA0E9678142277E80098338F /* Build configuration list for PBXProject "Truck Tracker App" */;
@@ -343,7 +377,6 @@
 				AA0E968D142277E80098338F /* InfoPlist.strings in Resources */,
 				AA0E96A2142277E80098338F /* MapView.xib in Resources */,
 				AA0E96C6142279960098338F /* BlockPartyView.xib in Resources */,
-				AA7768FA14284AAD00C313B3 /* FavoritesView.xib in Resources */,
 				AA04BDB21434ECDA00B36634 /* TruckDetailView.xib in Resources */,
 				AAE47AFA144766810069BC48 /* MainWindow.xib in Resources */,
 				AAE47AFF14476DCB0069BC48 /* BatmanView.xib in Resources */,
@@ -355,6 +388,8 @@
 				AA229292146C2EEF0000D6E5 /* TruckMapView.xib in Resources */,
 				AA2EE2FA147569AC0023BDA0 /* Westside Schedule.tiff in Resources */,
 				AA2EE2FF14756C060023BDA0 /* ScheduleView.xib in Resources */,
+				0528DB6514E1964B00BAE4ED /* FavoritesViewController.xib in Resources */,
+				0528DB7014E19FF200BAE4ED /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +429,6 @@
 				AA0E9693142277E80098338F /* Truck_Tracker_AppAppDelegate.m in Sources */,
 				AA0E969C142277E80098338F /* MapViewController.m in Sources */,
 				AA0E96C5142279960098338F /* BlockPartyViewController.m in Sources */,
-				AA7768F914284AAD00C313B3 /* FavoritesViewController.m in Sources */,
 				AA4CF12B14291988003FF4A2 /* Truck.m in Sources */,
 				AA04BDB11434ECDA00B36634 /* TruckDetailViewController.m in Sources */,
 				AAE47AFE14476DCB0069BC48 /* BatmanViewController.m in Sources */,
@@ -403,6 +437,10 @@
 				AA229291146C2EEF0000D6E5 /* TruckMapViewController.m in Sources */,
 				AA2EE2FE14756C060023BDA0 /* ScheduleViewController.m in Sources */,
 				AA72C1FB148EA849006FC715 /* TruckAnnotation.m in Sources */,
+				0528DB6414E1964B00BAE4ED /* FavoritesViewController.m in Sources */,
+				0528DB6814E1993E00BAE4ED /* Person.m in Sources */,
+				0528DB6B14E19E8200BAE4ED /* BlockParty.m in Sources */,
+				0528DB6F14E19FF200BAE4ED /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +538,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Truck Tracker App/Truck Tracker App-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Truck Tracker App/Truck Tracker App-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -511,6 +550,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Truck Tracker App/Truck Tracker App-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Truck Tracker App/Truck Tracker App-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -527,6 +567,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Truck Tracker App/Truck Tracker App-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Truck Tracker AppTests/Truck Tracker AppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -544,6 +585,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Truck Tracker App/Truck Tracker App-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Truck Tracker AppTests/Truck Tracker AppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

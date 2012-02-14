@@ -8,21 +8,18 @@
 
 #import "Truck_Tracker_AppAppDelegate.h"
 #import "Truck.h"
+#import "Person.h"
+#import "BlockParty.h"
 
 @implementation Truck_Tracker_AppAppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
 @synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive,
-            coordinate, selectedTruck;
+            coordinate, selectedTruck, listPeople, selectedPerson, listParty, selectedBlockParty;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    // Add the tab bar controller's current view as a subview of the window
-    self.window.rootViewController = self.tabBarController;
-    [self.window makeKeyAndVisible];
-    
     // Initialize the default coordinate to use, which is the user's current location.
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -32,7 +29,7 @@
     
     // Initialize the mock database of trucks.
     listContent = [[NSArray alloc] initWithObjects:
-                   [Truck truckWithCuisine:@"American Cuisine" name:@"Buttermilk Truck" menu:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Buttermilk Truck Menu.tiff"] latitude: [NSNumber numberWithDouble: 0.1] longitude: [NSNumber numberWithDouble: 0.1]schedule:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Westside Schedule.tiff"]],
+                   [Truck truckWithCuisine:@"American Cuisine" name:@"Buttermilk Truck" menu:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Buttermilk Truck Menu.tiff"] latitude: [NSNumber numberWithDouble: 0.1] longitude: [NSNumber numberWithDouble: 0.1]schedule:@"7/15/12"],
                    [Truck truckWithCuisine:@"American Cuisine" name:@"In N Out Burgers" menu:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Lobsta Truck Menu.tiff"]
                                   latitude: [NSNumber numberWithDouble: 23.2] longitude: [NSNumber numberWithDouble: 80.2] schedule: nil],
                    [Truck truckWithCuisine:@"Mexican Cuisine" name:@"Hacienda Mexican" menu: nil
@@ -43,8 +40,29 @@
                                   latitude: [NSNumber numberWithDouble: 33.9698156] longitude: [NSNumber numberWithDouble: -118.4185009] schedule: nil],
                    nil];
     selectedTruck = nil;
-
+    NSLog(@"delegate: %d", [listContent count]);    
+    
+    //Initialize the mock database of users.
+    listPeople = [[NSArray alloc] initWithObjects:
+                  [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test"],
+                  [Person personWithEmail:@"dondi@lmu.edu" password:@"test"],
+                  nil];
+    selectedPerson = nil;
+   
+    //Initialize the mock database of block parties.
+    listParty = [[NSArray alloc] initWithObjects:
+                 [BlockParty blockpartyWithName:@"Westside Food Truck Central"],
+                 [BlockParty blockpartyWithName:@"Venice Food Truck Paradise"], 
+                nil];
+    selectedBlockParty = nil;
+    
+    // Override point for customization after application launch.
+    // Add the tab bar controller's current view as a subview of the window
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
+   
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

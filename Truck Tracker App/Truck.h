@@ -19,7 +19,7 @@
     NSData *menu;
     NSNumber *latitude;
     NSNumber *longitude;
-    NSData *schedule;
+    NSString *schedule;
     
 }
 
@@ -28,8 +28,8 @@
 @property (nonatomic, retain) NSNumber *latitude;
 @property (nonatomic, retain) NSNumber *longitude;
 @property (nonatomic, assign, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, retain) NSData *schedule;
+@property (nonatomic, retain) NSString *schedule;
 
-+ (id)truckWithCuisine:(NSString *)cuisine name:(NSString *)name menu:(NSData *)menu latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude schedule:(NSData *) schedule;
++ (id)truckWithCuisine:(NSString *)cuisine name:(NSString *)name menu:(NSData *)menu latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude schedule:(NSString *) schedule;
 
 @end

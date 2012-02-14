@@ -1,5 +1,5 @@
 //
-//  Class.h
+//  BlockPartyViewController.h
 //  Truck Tracker App
 //
 //  Created by Stephen Smith on 9/15/11.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Truck.h"
+
 
 @interface BlockPartyViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 {

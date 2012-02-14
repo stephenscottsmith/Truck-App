@@ -1,5 +1,5 @@
 //
-//  SixthViewController.h
+//  TrucksViewController.h
 //  Truck Tracker App
 //
 //  Created by Stephen Smith on 10/16/11.
@@ -13,6 +13,7 @@
 {
 	NSArray			*listContent;			// The master content.
 	NSMutableArray	*filteredListContent;	// The content filtered as a result of a search.
+    Truck           *truck;
 	
 	// The saved state of the search UI if a memory warning removed the view.
     NSString		*savedSearchTerm;
@@ -23,6 +24,7 @@
 
 @property (nonatomic, retain) NSArray *listContent;
 @property (nonatomic, retain) NSMutableArray *filteredListContent;
+@property (nonatomic, retain) Truck *truck;
 
 @property (nonatomic, copy) NSString *savedSearchTerm;
 @property (nonatomic) NSInteger savedScopeButtonIndex;

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Truck.h"
+#import "Person.h"
+#import "BlockParty.h"
 
 /*
  * I'm committed!
@@ -26,10 +28,19 @@
     NSInteger		savedScopeButtonIndex;
     BOOL			searchWasActive;
     
+    NSArray         *listPeople;
+    Person          *selectedPerson;
+    
+    NSArray         *listParty;
+    BlockParty      *selectedBlockParty;
+    
+    
+    
 }
 
 @property (nonatomic, retain) NSArray *listContent;
 @property (nonatomic, retain) NSMutableArray *filteredListContent;
+@property (nonatomic, retain) Truck *selectedTruck;
 
 @property (nonatomic, copy) NSString *savedSearchTerm;
 @property (nonatomic) NSInteger savedScopeButtonIndex;
@@ -41,6 +52,11 @@
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
-@property (nonatomic, retain) Truck *selectedTruck;
+
+@property (nonatomic, retain) Person *selectedPerson;
+@property (nonatomic, retain) NSArray *listPeople;
+
+@property (nonatomic, retain) BlockParty *selectedBlockParty;
+@property (nonatomic, retain) NSArray *listParty;
 
 @end

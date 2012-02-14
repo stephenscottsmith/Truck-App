@@ -1,5 +1,5 @@
 //
-//  Class.m
+//  BlockPartyViewController.m
 //  Truck Tracker App
 //
 //  Created by Stephen Smith on 9/15/11.
@@ -7,8 +7,8 @@
 //
 
 #import "BlockPartyViewController.h"
-#import "TruckDetailViewController.h"
 #import "Truck.h"
+#import "Truck_Tracker_AppAppDelegate.h"
 
 @implementation BlockPartyViewController
 
@@ -19,23 +19,9 @@
 #pragma mark Lifecycle methods
 
 - (void)viewDidLoad
-{
-	listContent = [[NSArray alloc] initWithObjects:
-                   [Truck truckWithCuisine:@"American Cuisine" name:@"Buttermilk Truck" menu:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Buttermilk Truck Menu.tiff"] latitude: [NSNumber numberWithDouble: 0.1] longitude: [NSNumber numberWithDouble: 0.1]schedule:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Westside Schedule.tiff"]],
-                   [Truck truckWithCuisine:@"American Cuisine" name:@"In N Out Burgers" menu:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Lobsta Truck Menu.tiff"]
-                                  latitude: [NSNumber numberWithDouble: 0.2] longitude: [NSNumber numberWithDouble: 0.2] schedule: nil],
-                   [Truck truckWithCuisine:@"Mexican Cuisine" name:@"Hacienda Mexican" menu: nil
-                                  latitude: [NSNumber numberWithDouble: 0.3] longitude: [NSNumber numberWithDouble: 0.3] schedule: nil],
-                   [Truck truckWithCuisine:@"Indian Cuisine" name:@"Naboo Indian"  menu: nil
-                                  latitude: [NSNumber numberWithDouble: 0.4] longitude: [NSNumber numberWithDouble: 0.4] schedule: nil],
-                   [Truck truckWithCuisine:@"Italian Cuisine" name:@"Vito's Italian" menu: nil
-                                  latitude: [NSNumber numberWithDouble: 33.9698156] longitude: [NSNumber numberWithDouble: -118.4185009] schedule: nil],
-                   nil];
-
-
+{	
+    self.listContent = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listParty;
     
-  
-	
 	// create a filtered list that will contain products for the search results table.
 	self.filteredListContent = [NSMutableArray arrayWithCapacity:[self.listContent count]];
 	
@@ -51,11 +37,6 @@
 	
 	[self.tableView reloadData];
 	self.tableView.scrollEnabled = YES;
-    
-    // Create the navigation controller.
-	// Add create and configure the navigation controller.
-//	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self];
-//    [self.view.window addSubview:navigationController.view];
 }
 
 - (void)viewDidUnload
@@ -116,41 +97,43 @@
     //	/*
     //	 If the requesting table view is the search display controller's table view, configure the cell using the filtered content, otherwise use the main list.
     //	 */
-    	if (tableView == self.searchDisplayController.searchResultsTableView)
+    	//This returns the  block party.
+    BlockParty *blockparty;
+        if (tableView == self.searchDisplayController.searchResultsTableView)
     	{
-            truck = [self.filteredListContent objectAtIndex:indexPath.row];
+            blockparty = [self.filteredListContent objectAtIndex:indexPath.row];
         }
     	else
     	{
-            truck = [self.listContent objectAtIndex:indexPath.row];
+            blockparty = [self.listContent objectAtIndex:indexPath.row];
         }
 	
-	cell.textLabel.text = truck.name;
+	cell.textLabel.text = blockparty.name;
 	return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BlockPartyViewController *detailsViewController = [[TruckDetailViewController alloc] initWithNibName:@"TruckDetailView" bundle:nil];
-    
+//    BlockPartyViewController *detailsViewController = [[BlockDetailViewController alloc] initWithNibName:@"TruckDetailView" bundle:nil];
+//    
 	/*
 	 If the requesting table view is the search display controller's table view, configure the next view controller using the filtered content, otherwise use the main list.
 	 */
-	if (tableView == self.searchDisplayController.searchResultsTableView)
-	{
-        truck = [self.filteredListContent objectAtIndex:indexPath.row];
-    }
-	else
-	{
-        truck = [self.listContent objectAtIndex:indexPath.row];
-    }
-	detailsViewController.title = truck.name;
-    detailsViewController.truck = truck;
-    
-    
-    [[self navigationController] pushViewController:detailsViewController animated:YES];
-    [detailsViewController release];
+//	if (tableView == self.searchDisplayController.searchResultsTableView)
+//	{
+//        truck = [self.filteredListContent objectAtIndex:indexPath.row];
+//    }
+//	else
+//	{
+//        truck = [self.listContent objectAtIndex:indexPath.row];
+//    }
+//	detailsViewController.title = truck.name;
+//    detailsViewController.truck = truck;
+//    
+//    
+//    [[self navigationController] pushViewController:detailsViewController animated:YES];
+//    [detailsViewController release];
 }
 
 
@@ -168,14 +151,14 @@
 	/*
 	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
 	 */
-	for (Truck *truck in listContent)
+	for (BlockParty *blockparty in listContent)
 	{
-		if ([scope isEqualToString:@"All"] || [truck.cuisine isEqualToString:scope])
+		if ([scope isEqualToString:@"All"] || [blockparty.name isEqualToString:scope])
 		{
-			NSComparisonResult result = [truck.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+			NSComparisonResult result = [blockparty.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
             if (result == NSOrderedSame)
 			{
-				[self.filteredListContent addObject:truck];
+				[self.filteredListContent addObject:blockparty];
             }
 		}
 	}

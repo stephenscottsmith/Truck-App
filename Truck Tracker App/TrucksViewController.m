@@ -1,5 +1,5 @@
 //
-//  SixthViewController.m
+//  TrucksViewController.m
 //  Truck Tracker App
 //
 //  Created by Stephen Smith on 10/16/11.
@@ -12,7 +12,7 @@
 
 @implementation TrucksViewController
 
-@synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive;
+@synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck;
 
 
 #pragma mark - 
@@ -21,10 +21,10 @@
 - (void)viewDidLoad
 {
     self.listContent = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listContent;
-	
+   
 
 	// create a filtered list that will contain products for the search results table.
-	self.filteredListContent = [NSMutableArray arrayWithCapacity:[self.listContent count]];
+	self.filteredListContent = [NSMutableArray arrayWithCapacity:[self.listContent count]]; 
 	
 	// restore search settings if they were saved in didReceiveMemoryWarning.
     if (self.savedSearchTerm)
@@ -152,12 +152,13 @@
 	 */
 	for (Truck *truck in listContent)
 	{
-		if ([scope isEqualToString:@"All"] || [truck.cuisine isEqualToString:scope])
+        if ([scope isEqualToString:@"All"] || [truck.cuisine isEqualToString:scope])
 		{
 			NSComparisonResult result = [truck.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
-            if (result == NSOrderedSame)
+          if (result == NSOrderedSame)
 			{
-				[self.filteredListContent addObject:truck];
+                NSLog (@"adding truck");
+			[self.filteredListContent addObject:truck];
             }
 		}
 	}
