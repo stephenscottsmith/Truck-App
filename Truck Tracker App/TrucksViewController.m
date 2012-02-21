@@ -18,6 +18,8 @@
 #pragma mark - 
 #pragma mark Lifecycle methods
 
+
+
 - (void)viewDidLoad
 {
     self.listContent = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listContent;
@@ -38,6 +40,11 @@
 	
 	[self.tableView reloadData];
 	self.tableView.scrollEnabled = YES;
+    
+    LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginView" bundle:nil];
+    controller.delegate = self;
+    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:controller animated:YES];
 }
 
 - (void)viewDidUnload
@@ -187,5 +194,11 @@
     return YES;
 }
 
+#pragma mark - Flipside View
+-(void) loginViewControllerDidFinish:(LoginViewController *)controller
+{
+    NSLog(@"Got to finish");
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 @end

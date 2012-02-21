@@ -10,6 +10,8 @@
 
 @implementation LoginViewController
 
+@synthesize delegate = _delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -46,6 +48,14 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Actions
+
+- (IBAction)login:(id)sender
+{
+    NSLog(@"Got to login");
+    [self.delegate loginViewControllerDidFinish:self];
 }
 
 @end

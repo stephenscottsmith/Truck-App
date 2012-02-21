@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Truck_Tracker_AppAppDelegate.h"
+#import "LoginViewController.h"
 
-@interface TrucksViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
+@interface TrucksViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate, LoginViewControllerDelegate>
 {
 	NSArray			*listContent;			// The master content.
 	NSMutableArray	*filteredListContent;	// The content filtered as a result of a search.
@@ -29,8 +30,6 @@
 @property (nonatomic, copy) NSString *savedSearchTerm;
 @property (nonatomic) NSInteger savedScopeButtonIndex;
 @property (nonatomic) BOOL searchWasActive;
-
-
 
 
 

@@ -12,7 +12,7 @@
 		0528DB6814E1993E00BAE4ED /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6714E1993E00BAE4ED /* Person.m */; };
 		0528DB6B14E19E8200BAE4ED /* BlockParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6A14E19E8100BAE4ED /* BlockParty.m */; };
 		0528DB6F14E19FF200BAE4ED /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6D14E19FF000BAE4ED /* LoginViewController.m */; };
-		0528DB7014E19FF200BAE4ED /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0528DB6E14E19FF100BAE4ED /* LoginViewController.xib */; };
+		0528DB7014E19FF200BAE4ED /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0528DB6E14E19FF100BAE4ED /* LoginView.xib */; };
 		8319A71114F1F889001D72B3 /* Block_Party_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */; };
 		8319A71214F1F889001D72B3 /* Map_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A70F14F1F889001D72B3 /* Map_Icon.png */; };
 		8319A71314F1F889001D72B3 /* Trucks_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A71014F1F889001D72B3 /* Trucks_Icon.png */; };
@@ -77,7 +77,7 @@
 		0528DB6A14E19E8100BAE4ED /* BlockParty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockParty.m; sourceTree = "<group>"; };
 		0528DB6C14E19FF000BAE4ED /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0528DB6D14E19FF000BAE4ED /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		0528DB6E14E19FF100BAE4ED /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		0528DB6E14E19FF100BAE4ED /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block_Party_Icon.png; sourceTree = "<group>"; };
 		8319A70F14F1F889001D72B3 /* Map_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map_Icon.png; sourceTree = "<group>"; };
 		8319A71014F1F889001D72B3 /* Trucks_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trucks_Icon.png; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 				AAE47AF9144766810069BC48 /* MainWindow.xib */,
 				0528DB6C14E19FF000BAE4ED /* LoginViewController.h */,
 				0528DB6D14E19FF000BAE4ED /* LoginViewController.m */,
-				0528DB6E14E19FF100BAE4ED /* LoginViewController.xib */,
+				0528DB6E14E19FF100BAE4ED /* LoginView.xib */,
 				AA0E9691142277E80098338F /* Truck_Tracker_AppAppDelegate.h */,
 				AA0E9692142277E80098338F /* Truck_Tracker_AppAppDelegate.m */,
 				AA93919A144B877200CC0203 /* TrucksViewController.h */,
@@ -401,7 +401,7 @@
 				AA2EE2FA147569AC0023BDA0 /* Westside Schedule.tiff in Resources */,
 				AA2EE2FF14756C060023BDA0 /* ScheduleView.xib in Resources */,
 				0528DB6514E1964B00BAE4ED /* FavoritesViewController.xib in Resources */,
-				0528DB7014E19FF200BAE4ED /* LoginViewController.xib in Resources */,
+				0528DB7014E19FF200BAE4ED /* LoginView.xib in Resources */,
 				8379846214F1D1B3006D14EF /* Favorites_Icon.png in Resources */,
 				8319A71114F1F889001D72B3 /* Block_Party_Icon.png in Resources */,
 				8319A71214F1F889001D72B3 /* Map_Icon.png in Resources */,

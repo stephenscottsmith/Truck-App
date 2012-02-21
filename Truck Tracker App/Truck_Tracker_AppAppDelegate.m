@@ -129,7 +129,7 @@
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"Got location!");
+ //   NSLog(@"Got location!");
     self.coordinate = newLocation.coordinate;
 }
 
