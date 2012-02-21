@@ -19,7 +19,9 @@
 @interface LoginViewController : UIViewController
 
 @property (assign, nonatomic) IBOutlet id <LoginViewControllerDelegate> delegate;
+@property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
 
 - (IBAction)login:(id)sender;
+- (IBAction)alertFailedLogin:(id)sender;
 
 @end

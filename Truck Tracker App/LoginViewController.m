@@ -11,6 +11,7 @@
 @implementation LoginViewController
 
 @synthesize delegate = _delegate;
+@synthesize usernameTextField = _usernameTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,8 +55,14 @@
 
 - (IBAction)login:(id)sender
 {
-    NSLog(@"Got to login");
+    // NSLog(@"Got to login");
     [self.delegate loginViewControllerDidFinish:self];
 }
+- (IBAction)alertFailedLogin:(id)sender
+{
+    UIAlertView *alertView = (UIAlertView *)[[UIAlertView alloc] initWithTitle:@"You Fail" message:@"Failed Login"delegate: nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
+    [alertView show];
+}
+
 
 @end

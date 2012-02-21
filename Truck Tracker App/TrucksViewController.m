@@ -197,8 +197,14 @@
 #pragma mark - Flipside View
 -(void) loginViewControllerDidFinish:(LoginViewController *)controller
 {
-    NSLog(@"Got to finish");
-    [self dismissModalViewControllerAnimated:YES];
+    NSLog(@"%@", controller.usernameTextField.text);
+    if (false /* username is "steve" and password is "steve" */) {
+        // Do whatever is needed upon a successful login.
+        [self dismissModalViewControllerAnimated:YES];
+    } else {
+        // Display an error message, and do not dismiss the login screen.
+        [controller alertFailedLogin:self];
+    }
 }
 
 @end
