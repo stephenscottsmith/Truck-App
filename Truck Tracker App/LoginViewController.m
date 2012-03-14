@@ -12,6 +12,7 @@
 
 @synthesize delegate = _delegate;
 @synthesize usernameTextField = _usernameTextField;
+@synthesize passwordTextField = _passwordTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,12 +33,6 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -53,11 +48,26 @@
 
 #pragma mark - Actions
 
+-(IBAction)dismissKeyboard:(id)sender {
+    [_usernameTextField resignFirstResponder];
+    [_passwordTextField resignFirstResponder];
+}
+/*-(void)textFieldDidBeginEditing:(UITextField *)sender
+{
+    if ([sender isEqual:_passwordTextField])
+    {
+        //move the main view, so that the keyboard does not hide it.
+        if  (self.view.frame.origin.y >= 0)
+        {
+            [self setViewMovedDown:YES];
+        }
+    }
+}*/
 - (IBAction)login:(id)sender
 {
-    // NSLog(@"Got to login");
     [self.delegate loginViewControllerDidFinish:self];
 }
+
 - (IBAction)alertFailedLogin:(id)sender
 {
     UIAlertView *alertView = (UIAlertView *)[[UIAlertView alloc] initWithTitle:@"You Fail" message:@"Failed Login"delegate: nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];

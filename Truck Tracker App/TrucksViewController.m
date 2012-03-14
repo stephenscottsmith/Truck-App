@@ -9,6 +9,7 @@
 #import "TrucksViewController.h"
 #import "TruckDetailViewController.h"
 #import "Truck_Tracker_AppAppDelegate.h"
+#import "LoginViewController.h"
 
 @implementation TrucksViewController
 
@@ -40,16 +41,17 @@
 	
 	[self.tableView reloadData];
 	self.tableView.scrollEnabled = YES;
-    
-    LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginView" bundle:nil];
-    controller.delegate = self;
-    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentModalViewController:controller animated:YES];
 }
 
 - (void)viewDidUnload
 {
 	self.filteredListContent = nil;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self displayLogin];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -195,13 +197,26 @@
 }
 
 #pragma mark - Flipside View
--(void) loginViewControllerDidFinish:(LoginViewController *)controller
+
+-(void)displayLogin
 {
-    NSLog(@"%@", controller.usernameTextField.text);
-    if (false /* username is "steve" and password is "steve" */) {
+    LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginView" bundle:nil];
+    controller.delegate = self;
+    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:controller animated:YES];    
+}
+
+-(void)loginViewControllerDidFinish:(LoginViewController *)controller
+{
+        if ([((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listPeople containsObject:
+             [Person personWithEmail: [[controller usernameTextField] text]
+                            password: controller.passwordTextField.text]])
+
+         {
         // Do whatever is needed upon a successful login.
         [self dismissModalViewControllerAnimated:YES];
-    } else {
+         
+         } else {
         // Display an error message, and do not dismiss the login screen.
         [controller alertFailedLogin:self];
     }

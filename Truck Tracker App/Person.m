@@ -28,4 +28,10 @@
 	[super dealloc];
 }
 
+- (BOOL)isEqual:(id)anObject {
+    // We will say that two Persons are equal if they have the same password and email.
+    Person *otherPerson = (Person *)anObject;
+    return [email isEqual: otherPerson.email] && [password isEqual: otherPerson.password];
+}
+
 @end

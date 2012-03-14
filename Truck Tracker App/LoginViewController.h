@@ -20,7 +20,9 @@
 
 @property (assign, nonatomic) IBOutlet id <LoginViewControllerDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
+@property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
 
+- (IBAction)dismissKeyboard:(id)sender;
 - (IBAction)login:(id)sender;
 - (IBAction)alertFailedLogin:(id)sender;
 

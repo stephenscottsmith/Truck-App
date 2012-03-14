@@ -360,7 +360,7 @@
 		AA0E9675142277E80098338F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Parthenon Productions";
 			};
 			buildConfigurationList = AA0E9678142277E80098338F /* Build configuration list for PBXProject "Truck Tracker App" */;
