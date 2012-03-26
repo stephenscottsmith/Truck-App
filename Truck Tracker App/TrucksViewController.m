@@ -15,6 +15,10 @@
 
 @synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck;
 
+// Private convenience method for grabbing our app delegate.
+- (Truck_Tracker_AppAppDelegate *)appDelegate {
+    return (Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate;
+}
 
 #pragma mark - 
 #pragma mark Lifecycle methods
@@ -51,7 +55,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self displayLogin];
+    if (((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).selectedPerson == nil) {
+        [self displayLogin];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -208,11 +214,14 @@
 
 -(void)loginViewControllerDidFinish:(LoginViewController *)controller
 {
-        if ([((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listPeople containsObject:
-             [Person personWithEmail: [[controller usernameTextField] text]
-                            password: controller.passwordTextField.text]])
+           Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text];
+    
+        if ([((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople containsObject:
+             selectedPerson])
 
          {
+             ((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).selectedPerson = selectedPerson;
+           
         // Do whatever is needed upon a successful login.
         [self dismissModalViewControllerAnimated:YES];
          

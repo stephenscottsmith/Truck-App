@@ -34,8 +34,6 @@
     NSArray         *listParty;
     BlockParty      *selectedBlockParty;
     
-    
-    
 }
 
 @property (nonatomic, retain) NSArray *listContent;

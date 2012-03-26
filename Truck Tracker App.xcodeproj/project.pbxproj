@@ -173,6 +173,9 @@
 		05D7719114E42C130039113F /* Shared Truck/Block Party Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA0E969A142277E80098338F /* MapViewController.h */,
+				AA0E969B142277E80098338F /* MapViewController.m */,
+				AA0E96A0142277E80098338F /* MapView.xib */,
 			);
 			name = "Shared Truck/Block Party Views";
 			sourceTree = "<group>";
@@ -264,9 +267,6 @@
 				AA93919A144B877200CC0203 /* TrucksViewController.h */,
 				AA93919B144B877200CC0203 /* TrucksViewController.m */,
 				AA93919C144B877200CC0203 /* TrucksView.xib */,
-				AA0E969A142277E80098338F /* MapViewController.h */,
-				AA0E969B142277E80098338F /* MapViewController.m */,
-				AA0E96A0142277E80098338F /* MapView.xib */,
 				AA0E96C2142279960098338F /* BlockPartyViewController.h */,
 				AA0E96C3142279960098338F /* BlockPartyViewController.m */,
 				AA0E96C4142279960098338F /* BlockPartyView.xib */,
