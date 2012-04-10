@@ -1,14 +1,21 @@
 //
-//  BatmanViewController.m
+//  ForgotPasswordViewController.m
 //  Truck Tracker App
 //
-//  Created by Stephen Smith on 10/13/11.
-//  Copyright 2011 Parthenon Productions. All rights reserved.
+//  Created by Stephen Smith on 3/29/12.
+//  Copyright (c) 2012 Parthenon Productions. All rights reserved.
 //
 
-#import "BatmanViewController.h"
+#import "ForgotPasswordViewController.h"
 
-@implementation BatmanViewController
+@interface ForgotPasswordViewController ()
+
+@end
+
+@implementation ForgotPasswordViewController
+
+@synthesize delegate = _delegate;
+@synthesize emailTextField = _emailTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -18,16 +25,6 @@
     }
     return self;
 }
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
@@ -44,8 +41,10 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
+- (IBAction)sendEmail:(id)sender
+{
+    [self.delegate forgotPasswordViewControllerDidFinish:self];
+}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "Truck_Tracker_AppAppDelegate.h"
 
 @implementation LoginViewController
 
@@ -73,6 +74,47 @@
     UIAlertView *alertView = (UIAlertView *)[[UIAlertView alloc] initWithTitle:@"You Fail" message:@"Failed Login"delegate: nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
     [alertView show];
 }
+-(IBAction)newUser:(id)sender
+{
+    NewUserController *controller = [[NewUserController alloc] initWithNibName:@"NewUser" bundle:nil];
+    controller.delegate = self;
+    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:controller animated:YES];    
+}
+-(void)newUserControllerDidFinish:(NewUserController *)controller
+{
+    //Create person, check to see if person is in database, if yes display alert, if no add person and dismiss modal view
+    
+    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text];
+    
+    if (![((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople containsObject:
+         selectedPerson])
+        
+    {
+        Person *newPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text]; 
+        
+        [((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople addObject:newPerson];
+        
+        // Do whatever is needed upon a successful login.
+        [self dismissModalViewControllerAnimated:YES];
+        
+    } else {
+        // Display an error message, and do not dismiss the login screen.
+        [controller alertNeedNewUserName:self];
+    }
+}
 
+-(IBAction)forgotPassword:(id)sender
+{
+    ForgotPasswordViewController *controller = [[ForgotPasswordViewController alloc] initWithNibName:@"ForgotPasswordView" bundle:nil];
+    controller.delegate = self;
+    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:controller animated:YES];    
+}
+-(void)forgotPasswordViewControllerDidFinish:(ForgotPasswordViewController *)controller
+{
+    //Need logic to check user database and send an email to the person that requested their password
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 @end

@@ -28,7 +28,7 @@
     NSInteger		savedScopeButtonIndex;
     BOOL			searchWasActive;
     
-    NSArray         *listPeople;
+    NSMutableArray  *listPeople;
     Person          *selectedPerson;
     
     NSArray         *listParty;
@@ -52,7 +52,7 @@
 
 
 @property (nonatomic, retain) Person *selectedPerson;
-@property (nonatomic, retain) NSArray *listPeople;
+@property (nonatomic, retain) NSMutableArray *listPeople;
 
 @property (nonatomic, retain) BlockParty *selectedBlockParty;
 @property (nonatomic, retain) NSArray *listParty;

@@ -1,14 +1,14 @@
 //
-//  ScheduleViewController.m
+//  ContactViewController.m
 //  Truck Tracker App
 //
-//  Created by Scott Smith on 11/17/11.
+//  Created by Stephen Smith on 10/13/11.
 //  Copyright 2011 Parthenon Productions. All rights reserved.
 //
 
-#import "ScheduleViewController.h"
+#import "ContactViewController.h"
 
-@implementation ScheduleViewController
+@implementation ContactViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,10 +25,6 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
-}
-- (void)viewWillAppear:(BOOL)animated
-{
- 
 }
 
 #pragma mark - View lifecycle

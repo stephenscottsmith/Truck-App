@@ -21,4 +21,6 @@
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
+-(IBAction)logout:(id)sender;
+
 @end

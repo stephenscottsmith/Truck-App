@@ -9,13 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Truck.h"
 
-@interface ScheduleViewController : UIViewController {
+@interface ScheduleViewController : UITableViewController {
     
-    UIImage *scheduleUIImage;
-    UIImageView *scheduleUIImageView;
+ 
 }
-
-@property (nonatomic, retain) UIImage  *scheduleUIImage;
-@property (nonatomic, retain) IBOutlet UIImageView *scheduleUIImageView;
 
 @end

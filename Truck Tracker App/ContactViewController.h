@@ -1,5 +1,5 @@
 //
-//  BatmanViewController.h
+//  ConactViewController.h
 //  Truck Tracker App
 //
 //  Created by Stephen Smith on 10/13/11.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BatmanViewController : UIViewController
+@interface ContactViewController : UIViewController
+{
+  
+}
 
 @end

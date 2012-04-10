@@ -7,7 +7,7 @@
 //
 
 #import "TruckDetailViewController.h"
-#import "BatmanViewController.h"
+#import "ContactViewController.h"
 #import "MenuViewController.h"
 #import "BlockPartyViewController.h"
 #import "TruckMapViewController.h"
@@ -65,7 +65,7 @@
 
 -(IBAction)displayBatman:(id)sender
 {
-    UIViewController *detailsViewController = [[BatmanViewController alloc] initWithNibName:@"BatmanView" bundle:nil];
+    UIViewController *detailsViewController = [[ContactViewController alloc] initWithNibName:@"ContactView" bundle:nil];
     
 
 	detailsViewController.title = @"Batman";
@@ -103,7 +103,6 @@
     
     
 	detailsViewController.title = @"Schedule";
-    detailsViewController.scheduleUIImage = [UIImage imageWithData:truck.schedule];
     
     [[self navigationController] pushViewController:detailsViewController animated:YES];
     [detailsViewController release];

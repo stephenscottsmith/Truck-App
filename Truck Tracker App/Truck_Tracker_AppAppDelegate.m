@@ -43,7 +43,7 @@
     NSLog(@"delegate: %d", [listContent count]);    
     
     //Initialize the mock database of users.
-    listPeople = [[NSArray alloc] initWithObjects:
+    listPeople = [[NSMutableArray alloc] initWithObjects:
                   [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test"],
                   [Person personWithEmail:@"dondi@lmu.edu" password:@"test"],
                   nil];
