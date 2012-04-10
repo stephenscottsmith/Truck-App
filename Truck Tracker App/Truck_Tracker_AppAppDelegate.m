@@ -44,10 +44,13 @@
     
     //Initialize the mock database of users.
     listPeople = [[NSMutableArray alloc] initWithObjects:
-                  [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test"],
-                  [Person personWithEmail:@"dondi@lmu.edu" password:@"test"],
+                  [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test" type:@"User"],
+                  [Person personWithEmail:@"dondi@lmu.edu" password:@"test" type:@"Truck Owner"],
                   nil];
     selectedPerson = nil;
+    
+    
+    
    
     //Initialize the mock database of block parties.
     listParty = [[NSArray alloc] initWithObjects:

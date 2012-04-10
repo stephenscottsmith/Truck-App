@@ -14,6 +14,7 @@
 @synthesize delegate = _delegate;
 @synthesize usernameTextField = _usernameTextField;
 @synthesize passwordTextField = _passwordTextField;
+@synthesize typeTextField = _typeTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -85,13 +86,13 @@
 {
     //Create person, check to see if person is in database, if yes display alert, if no add person and dismiss modal view
     
-    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text];
+    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text];
     
     if (![((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople containsObject:
          selectedPerson])
         
     {
-        Person *newPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text]; 
+        Person *newPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text]; 
         
         [((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople addObject:newPerson];
         

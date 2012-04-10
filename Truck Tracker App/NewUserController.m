@@ -12,7 +12,7 @@
 @implementation NewUserController
 
 @synthesize delegate = _delegate;
-@synthesize usernameTextField = _usernameTextField, passwordTextField = _passwordTextField;
+@synthesize usernameTextField = _usernameTextField, passwordTextField = _passwordTextField, typeTextField = _typeTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

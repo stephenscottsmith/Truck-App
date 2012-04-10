@@ -19,6 +19,7 @@
 @property (assign, nonatomic) IBOutlet id <NewUserControllerDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
+@property (nonatomic, retain) IBOutlet UITextField *typeTextField;
 
 
 -(IBAction)addPerson:(id)sender;

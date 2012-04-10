@@ -12,11 +12,12 @@
 {
     NSString *email;
     NSString *password;
+    NSString *type;
     
 }
 
-@property (nonatomic, copy) NSString *email, *password;
+@property (nonatomic, copy) NSString *email, *password, *type;
 
-+ (id)personWithEmail:(NSString *)email password:(NSString *)password;
++ (id)personWithEmail:(NSString *)email password:(NSString *)password type:(NSString *)type;
 
 @end

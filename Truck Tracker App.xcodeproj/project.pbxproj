@@ -20,6 +20,15 @@
 		0597D06F1521ABA200EA198F /* Login Button Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0597D06D1521ABA200EA198F /* Login Button Down.png */; };
 		0597D0701521ABA200EA198F /* Login Screen Retro v1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0597D06E1521ABA200EA198F /* Login Screen Retro v1.png */; };
 		0597D0721521B1E500EA198F /* Login Button Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0597D0711521B1E500EA198F /* Login Button Up.png */; };
+		05DDFF6515340E8F008A5099 /* TOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDFF6315340E8E008A5099 /* TOSettingsViewController.m */; };
+		05DDFF6615340E8F008A5099 /* TOSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF6415340E8F008A5099 /* TOSettingsView.xib */; };
+		05DDFF6A15340F1A008A5099 /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDFF6815340F1A008A5099 /* UserSettingsViewController.m */; };
+		05DDFF6B15340F1A008A5099 /* UserSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF6915340F1A008A5099 /* UserSettingsView.xib */; };
+		05DDFF7215341571008A5099 /* ContactDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF6D15341571008A5099 /* ContactDown.png */; };
+		05DDFF7315341571008A5099 /* FindDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF6E15341571008A5099 /* FindDown.png */; };
+		05DDFF7415341571008A5099 /* MenuDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF6F15341571008A5099 /* MenuDown.png */; };
+		05DDFF7515341571008A5099 /* ScheduleDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF7015341571008A5099 /* ScheduleDown.png */; };
+		05DDFF7615341571008A5099 /* TruckViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF7115341571008A5099 /* TruckViewBG.png */; };
 		8319A71114F1F889001D72B3 /* Block_Party_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */; };
 		8319A71214F1F889001D72B3 /* Map_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A70F14F1F889001D72B3 /* Map_Icon.png */; };
 		8319A71314F1F889001D72B3 /* Trucks_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A71014F1F889001D72B3 /* Trucks_Icon.png */; };
@@ -93,6 +102,17 @@
 		0597D06D1521ABA200EA198F /* Login Button Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Button Down.png"; sourceTree = "<group>"; };
 		0597D06E1521ABA200EA198F /* Login Screen Retro v1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Screen Retro v1.png"; sourceTree = "<group>"; };
 		0597D0711521B1E500EA198F /* Login Button Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Button Up.png"; sourceTree = "<group>"; };
+		05DDFF6215340E8E008A5099 /* TOSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOSettingsViewController.h; sourceTree = "<group>"; };
+		05DDFF6315340E8E008A5099 /* TOSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOSettingsViewController.m; sourceTree = "<group>"; };
+		05DDFF6415340E8F008A5099 /* TOSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOSettingsView.xib; sourceTree = "<group>"; };
+		05DDFF6715340F1A008A5099 /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingsViewController.h; sourceTree = "<group>"; };
+		05DDFF6815340F1A008A5099 /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingsViewController.m; sourceTree = "<group>"; };
+		05DDFF6915340F1A008A5099 /* UserSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSettingsView.xib; sourceTree = "<group>"; };
+		05DDFF6D15341571008A5099 /* ContactDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContactDown.png; sourceTree = "<group>"; };
+		05DDFF6E15341571008A5099 /* FindDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FindDown.png; sourceTree = "<group>"; };
+		05DDFF6F15341571008A5099 /* MenuDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuDown.png; sourceTree = "<group>"; };
+		05DDFF7015341571008A5099 /* ScheduleDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScheduleDown.png; sourceTree = "<group>"; };
+		05DDFF7115341571008A5099 /* TruckViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TruckViewBG.png; sourceTree = "<group>"; };
 		8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block_Party_Icon.png; sourceTree = "<group>"; };
 		8319A70F14F1F889001D72B3 /* Map_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map_Icon.png; sourceTree = "<group>"; };
 		8319A71014F1F889001D72B3 /* Trucks_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trucks_Icon.png; sourceTree = "<group>"; };
@@ -210,6 +230,18 @@
 			name = "Shared Truck/Block Party Views";
 			sourceTree = "<group>";
 		};
+		05DDFF6C15341571008A5099 /* TruckView */ = {
+			isa = PBXGroup;
+			children = (
+				05DDFF6D15341571008A5099 /* ContactDown.png */,
+				05DDFF6E15341571008A5099 /* FindDown.png */,
+				05DDFF6F15341571008A5099 /* MenuDown.png */,
+				05DDFF7015341571008A5099 /* ScheduleDown.png */,
+				05DDFF7115341571008A5099 /* TruckViewBG.png */,
+			);
+			path = TruckView;
+			sourceTree = "<group>";
+		};
 		AA0E9673142277E80098338F = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +336,12 @@
 				AA0E969A142277E80098338F /* MapViewController.h */,
 				AA0E969B142277E80098338F /* MapViewController.m */,
 				AA0E96A0142277E80098338F /* MapView.xib */,
+				05DDFF6715340F1A008A5099 /* UserSettingsViewController.h */,
+				05DDFF6815340F1A008A5099 /* UserSettingsViewController.m */,
+				05DDFF6915340F1A008A5099 /* UserSettingsView.xib */,
+				05DDFF6215340E8E008A5099 /* TOSettingsViewController.h */,
+				05DDFF6315340E8E008A5099 /* TOSettingsViewController.m */,
+				05DDFF6415340E8F008A5099 /* TOSettingsView.xib */,
 				AA72C1F9148EA849006FC715 /* TruckAnnotation.h */,
 				AA72C1FA148EA849006FC715 /* TruckAnnotation.m */,
 				AA4CF12914291988003FF4A2 /* Truck.h */,
@@ -341,6 +379,7 @@
 				AADA5C1C14604FB000BC977C /* Buttermilk Truck Menu.tiff */,
 				AADA5C221460776000BC977C /* Lobsta Truck Menu.tiff */,
 				AA2EE2F9147569AC0023BDA0 /* Westside Schedule.tiff */,
+				05DDFF6C15341571008A5099 /* TruckView */,
 			);
 			name = "Truck Group";
 			sourceTree = "<group>";
@@ -440,6 +479,13 @@
 				0597D0721521B1E500EA198F /* Login Button Up.png in Resources */,
 				0572EF6D1524C54800F3BC28 /* NewUser.xib in Resources */,
 				0572EF721524C5A300F3BC28 /* ForgotPasswordView.xib in Resources */,
+				05DDFF6615340E8F008A5099 /* TOSettingsView.xib in Resources */,
+				05DDFF6B15340F1A008A5099 /* UserSettingsView.xib in Resources */,
+				05DDFF7215341571008A5099 /* ContactDown.png in Resources */,
+				05DDFF7315341571008A5099 /* FindDown.png in Resources */,
+				05DDFF7415341571008A5099 /* MenuDown.png in Resources */,
+				05DDFF7515341571008A5099 /* ScheduleDown.png in Resources */,
+				05DDFF7615341571008A5099 /* TruckViewBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +539,8 @@
 				0528DB6F14E19FF200BAE4ED /* LoginViewController.m in Sources */,
 				0572EF6C1524C54800F3BC28 /* NewUserController.m in Sources */,
 				0572EF711524C5A300F3BC28 /* ForgotPasswordViewController.m in Sources */,
+				05DDFF6515340E8F008A5099 /* TOSettingsViewController.m in Sources */,
+				05DDFF6A15340F1A008A5099 /* UserSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

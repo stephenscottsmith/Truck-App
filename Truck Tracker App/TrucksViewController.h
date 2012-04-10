@@ -10,7 +10,7 @@
 #import "Truck_Tracker_AppAppDelegate.h"
 #import "LoginViewController.h"
 
-@interface TrucksViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate, LoginViewControllerDelegate>
+@interface TrucksViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 {
 	NSArray			*listContent;			// The master content.
 	NSMutableArray	*filteredListContent;	// The content filtered as a result of a search.
