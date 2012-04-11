@@ -19,6 +19,18 @@
             coordinate, selectedTruck, listPeople, selectedPerson, listParty, selectedBlockParty;
 
 
+/*self.tabBarController = [[UITabBarController alloc] init];
+self.tabBarController.delegate=self;
+self.tabBarController.selectedIndex=0;
+self.tabBarController.delegate=self;*/
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    NSUInteger index=[[tabBarController viewControllers] indexOfObject:viewController];
+    
+     return YES;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Initialize the default coordinate to use, which is the user's current location.
@@ -49,9 +61,6 @@
                   [Person personWithEmail:@"dondi@lmu.edu" password:@"test" type:@"Truck Owner"],
                   nil];
     selectedPerson = nil;
-    
-    
-    
    
     //Initialize the mock database of block parties.
     listParty = [[NSArray alloc] initWithObjects:

@@ -10,6 +10,13 @@
 #import "Truck_Tracker_AppAppDelegate.h"
 #import "LoginViewController.h"
 
+#import "TruckDetailViewController.h"
+#import "BlockPartyViewController.h"
+#import "MapViewController.h"
+#import "MapViewController.h"
+#import "FavoritesViewController.h"
+#import "TOSettingsViewController.h"
+
 @interface UserSettingsViewController ()
 
 @end
@@ -84,6 +91,41 @@
         // Display an error message, and do not dismiss the login screen.
         [controller alertFailedLogin:self];
     }
+    
+    Truck_Tracker_AppAppDelegate *delegate = (Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate;
+    UIViewController *viewController1 = [[TruckDetailViewController alloc] initWithNibName:@"TruckDetailView" bundle:nil];
+    UIViewController *viewController2 = [[BlockPartyViewController alloc] initWithNibName:@"BlockPartyView" bundle:nil];
+    UIViewController *viewController3 = [[FavoritesViewController alloc] initWithNibName:@"FavoritesView" bundle:nil];
+    UIViewController *viewController4 = [[MapViewController alloc] initWithNibName:@"MapView" bundle:nil];
+    UIViewController *viewController5 = [[UserSettingsViewController alloc] initWithNibName:@"UserSettingsView" bundle:nil];
+    UIViewController *viewController6 = [[TOSettingsViewController alloc] initWithNibName:@"TOSettingsView" bundle:nil];
+    
+    ///   tab button title
+    /*viewController1.title = @"Basic information";
+    viewController2.title = @"Misc Quotation";
+    viewController4.title = @"Quotation Line";
+    viewController5.title = @"Charges";
+    viewController7.title = @"Sales Part Stock";
+    
+    // tab button Images
+    viewController1.tabBarItem.image = [UIImage imageNamed:@"general.png"];
+    viewController2.tabBarItem.image = [UIImage imageNamed:@"misle.png"];
+    viewController4.tabBarItem.image = [UIImage imageNamed:@"history.png"];
+    viewController5.tabBarItem.image = [UIImage imageNamed:@"charges.png"];
+    viewController7.tabBarItem.image = [UIImage imageNamed:@"shoebox.png"];*/
+    
+    delegate.tabBarController = [[UITabBarController alloc] init];
+    delegate.tabBarController.selectedIndex = 0;
+    
+    if(selectedPerson.type == @"Truck Owner"){
+        delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1,  viewController2, viewController3, viewController4, viewController6, nil];
+    }
+    else{
+        delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2,viewController3, viewController4, viewController5,  nil];
+    }
+    delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, viewController5, viewController6, nil];
+    delegate.tabBarController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self.navigationController pushViewController:delegate.tabBarController animated:YES];
 }
 
 #pragma mark - Buttons
