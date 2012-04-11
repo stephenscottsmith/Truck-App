@@ -14,7 +14,6 @@
 @synthesize delegate = _delegate;
 @synthesize usernameTextField = _usernameTextField;
 @synthesize passwordTextField = _passwordTextField;
-@synthesize typeTextField = _typeTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

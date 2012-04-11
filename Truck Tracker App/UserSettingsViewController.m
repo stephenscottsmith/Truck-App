@@ -58,14 +58,25 @@
 
 -(void)loginViewControllerDidFinish:(LoginViewController *)controller
 {
-    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text];
-    
-    if ([((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople containsObject:
-         selectedPerson])
+//    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text];
+  
+    __block Person *selectedPerson = nil;
+    [((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople enumerateObjectsUsingBlock:^(id person, NSUInteger idx, BOOL *stop) {
+        Person *currentPerson = (Person *)person;
+        if ([currentPerson.email isEqualToString:controller.usernameTextField.text] &&
+                [currentPerson.password isEqualToString:controller.passwordTextField.text]) {
+            selectedPerson = currentPerson;
+            *stop = YES;
+        }
+    }];
+
+    if (selectedPerson != nil)
         
     {
         ((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).selectedPerson = selectedPerson;
-        
+
+        NSLog(@"User type: %@", selectedPerson.type);
+
         // Do whatever is needed upon a successful login.
         [self dismissModalViewControllerAnimated:YES];
         

@@ -18,6 +18,7 @@
 @synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive,
             coordinate, selectedTruck, listPeople, selectedPerson, listParty, selectedBlockParty;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Initialize the default coordinate to use, which is the user's current location.

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Truck.h"
 
-@interface ScheduleViewController : UITableViewController {
+@interface ScheduleViewController : UIViewController {
     
  
 }

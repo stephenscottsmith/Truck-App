@@ -17,9 +17,14 @@
 		0572EF6D1524C54800F3BC28 /* NewUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572EF6B1524C54800F3BC28 /* NewUser.xib */; };
 		0572EF711524C5A300F3BC28 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572EF6F1524C5A300F3BC28 /* ForgotPasswordViewController.m */; };
 		0572EF721524C5A300F3BC28 /* ForgotPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572EF701524C5A300F3BC28 /* ForgotPasswordView.xib */; };
-		0597D06F1521ABA200EA198F /* Login Button Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0597D06D1521ABA200EA198F /* Login Button Down.png */; };
-		0597D0701521ABA200EA198F /* Login Screen Retro v1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0597D06E1521ABA200EA198F /* Login Screen Retro v1.png */; };
-		0597D0721521B1E500EA198F /* Login Button Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0597D0711521B1E500EA198F /* Login Button Up.png */; };
+		05763F3B15343FF80024C04D /* MenuBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F3815343FF80024C04D /* MenuBG.png */; };
+		05763F3C15343FF80024C04D /* ScheduleBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F3915343FF80024C04D /* ScheduleBG.png */; };
+		05763F3D15343FF80024C04D /* SettingsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F3A15343FF80024C04D /* SettingsBG.png */; };
+		05763F45153440E70024C04D /* LoginButtonDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F40153440E70024C04D /* LoginButtonDown.png */; };
+		05763F46153440E70024C04D /* LoginButtonUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F41153440E70024C04D /* LoginButtonUp.png */; };
+		05763F47153440E70024C04D /* LoginScreenBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F42153440E70024C04D /* LoginScreenBG.png */; };
+		05763F48153440E70024C04D /* LostPasswordDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F43153440E70024C04D /* LostPasswordDown.png */; };
+		05763F49153440E70024C04D /* NewUserDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F44153440E70024C04D /* NewUserDown.png */; };
 		05DDFF6515340E8F008A5099 /* TOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDFF6315340E8E008A5099 /* TOSettingsViewController.m */; };
 		05DDFF6615340E8F008A5099 /* TOSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF6415340E8F008A5099 /* TOSettingsView.xib */; };
 		05DDFF6A15340F1A008A5099 /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDFF6815340F1A008A5099 /* UserSettingsViewController.m */; };
@@ -29,6 +34,7 @@
 		05DDFF7415341571008A5099 /* MenuDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF6F15341571008A5099 /* MenuDown.png */; };
 		05DDFF7515341571008A5099 /* ScheduleDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF7015341571008A5099 /* ScheduleDown.png */; };
 		05DDFF7615341571008A5099 /* TruckViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF7115341571008A5099 /* TruckViewBG.png */; };
+		05DDFF7D1534353B008A5099 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF7C1534353B008A5099 /* MainWindow.xib */; };
 		8319A71114F1F889001D72B3 /* Block_Party_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */; };
 		8319A71214F1F889001D72B3 /* Map_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A70F14F1F889001D72B3 /* Map_Icon.png */; };
 		8319A71314F1F889001D72B3 /* Trucks_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A71014F1F889001D72B3 /* Trucks_Icon.png */; };
@@ -66,7 +72,6 @@
 		AA93919E144B877200CC0203 /* TrucksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA93919C144B877200CC0203 /* TrucksView.xib */; };
 		AADA5C1D14604FB000BC977C /* Buttermilk Truck Menu.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AADA5C1C14604FB000BC977C /* Buttermilk Truck Menu.tiff */; };
 		AADA5C231460776000BC977C /* Lobsta Truck Menu.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AADA5C221460776000BC977C /* Lobsta Truck Menu.tiff */; };
-		AAE47AFA144766810069BC48 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE47AF9144766810069BC48 /* MainWindow.xib */; };
 		AAE47AFE14476DCB0069BC48 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE47AFC14476DCB0069BC48 /* ContactViewController.m */; };
 		AAE47AFF14476DCB0069BC48 /* ContactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE47AFD14476DCB0069BC48 /* ContactView.xib */; };
 		AAEA98A0146C66ED00DA6067 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA989F146C66ED00DA6067 /* MapKit.framework */; };
@@ -99,9 +104,14 @@
 		0572EF6E1524C5A300F3BC28 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		0572EF6F1524C5A300F3BC28 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		0572EF701524C5A300F3BC28 /* ForgotPasswordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordView.xib; sourceTree = "<group>"; };
-		0597D06D1521ABA200EA198F /* Login Button Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Button Down.png"; sourceTree = "<group>"; };
-		0597D06E1521ABA200EA198F /* Login Screen Retro v1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Screen Retro v1.png"; sourceTree = "<group>"; };
-		0597D0711521B1E500EA198F /* Login Button Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Button Up.png"; sourceTree = "<group>"; };
+		05763F3815343FF80024C04D /* MenuBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuBG.png; sourceTree = "<group>"; };
+		05763F3915343FF80024C04D /* ScheduleBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScheduleBG.png; sourceTree = "<group>"; };
+		05763F3A15343FF80024C04D /* SettingsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsBG.png; sourceTree = "<group>"; };
+		05763F40153440E70024C04D /* LoginButtonDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginButtonDown.png; sourceTree = "<group>"; };
+		05763F41153440E70024C04D /* LoginButtonUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginButtonUp.png; sourceTree = "<group>"; };
+		05763F42153440E70024C04D /* LoginScreenBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginScreenBG.png; sourceTree = "<group>"; };
+		05763F43153440E70024C04D /* LostPasswordDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LostPasswordDown.png; sourceTree = "<group>"; };
+		05763F44153440E70024C04D /* NewUserDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewUserDown.png; sourceTree = "<group>"; };
 		05DDFF6215340E8E008A5099 /* TOSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOSettingsViewController.h; sourceTree = "<group>"; };
 		05DDFF6315340E8E008A5099 /* TOSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOSettingsViewController.m; sourceTree = "<group>"; };
 		05DDFF6415340E8F008A5099 /* TOSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOSettingsView.xib; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 		05DDFF6F15341571008A5099 /* MenuDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuDown.png; sourceTree = "<group>"; };
 		05DDFF7015341571008A5099 /* ScheduleDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScheduleDown.png; sourceTree = "<group>"; };
 		05DDFF7115341571008A5099 /* TruckViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TruckViewBG.png; sourceTree = "<group>"; };
+		05DDFF7C1534353B008A5099 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block_Party_Icon.png; sourceTree = "<group>"; };
 		8319A70F14F1F889001D72B3 /* Map_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map_Icon.png; sourceTree = "<group>"; };
 		8319A71014F1F889001D72B3 /* Trucks_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trucks_Icon.png; sourceTree = "<group>"; };
@@ -163,7 +174,6 @@
 		AA93919C144B877200CC0203 /* TrucksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrucksView.xib; sourceTree = "<group>"; };
 		AADA5C1C14604FB000BC977C /* Buttermilk Truck Menu.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Buttermilk Truck Menu.tiff"; sourceTree = "<group>"; };
 		AADA5C221460776000BC977C /* Lobsta Truck Menu.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Lobsta Truck Menu.tiff"; sourceTree = "<group>"; };
-		AAE47AF9144766810069BC48 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		AAE47AFB14476DCB0069BC48 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
 		AAE47AFC14476DCB0069BC48 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		AAE47AFD14476DCB0069BC48 /* ContactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactView.xib; sourceTree = "<group>"; };
@@ -209,11 +219,30 @@
 				0572EF6E1524C5A300F3BC28 /* ForgotPasswordViewController.h */,
 				0572EF6F1524C5A300F3BC28 /* ForgotPasswordViewController.m */,
 				0572EF701524C5A300F3BC28 /* ForgotPasswordView.xib */,
-				0597D06D1521ABA200EA198F /* Login Button Down.png */,
-				0597D0711521B1E500EA198F /* Login Button Up.png */,
-				0597D06E1521ABA200EA198F /* Login Screen Retro v1.png */,
 			);
 			name = "Login Group";
+			sourceTree = "<group>";
+		};
+		05763F3715343FF80024C04D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				05763F3815343FF80024C04D /* MenuBG.png */,
+				05763F3915343FF80024C04D /* ScheduleBG.png */,
+				05763F3A15343FF80024C04D /* SettingsBG.png */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		05763F3F153440E70024C04D /* Login Screen v2 */ = {
+			isa = PBXGroup;
+			children = (
+				05763F40153440E70024C04D /* LoginButtonDown.png */,
+				05763F41153440E70024C04D /* LoginButtonUp.png */,
+				05763F42153440E70024C04D /* LoginScreenBG.png */,
+				05763F43153440E70024C04D /* LostPasswordDown.png */,
+				05763F44153440E70024C04D /* NewUserDown.png */,
+			);
+			path = "Login Screen v2";
 			sourceTree = "<group>";
 		};
 		05D7718F14E42B650039113F /* Block Party Group */ = {
@@ -321,7 +350,7 @@
 		AA939198144B86AD00CC0203 /* Tab Bar Group */ = {
 			isa = PBXGroup;
 			children = (
-				AAE47AF9144766810069BC48 /* MainWindow.xib */,
+				05DDFF7C1534353B008A5099 /* MainWindow.xib */,
 				AA0E9691142277E80098338F /* Truck_Tracker_AppAppDelegate.h */,
 				AA0E9692142277E80098338F /* Truck_Tracker_AppAppDelegate.m */,
 				AA93919A144B877200CC0203 /* TrucksViewController.h */,
@@ -354,6 +383,7 @@
 				8319A70F14F1F889001D72B3 /* Map_Icon.png */,
 				8319A71014F1F889001D72B3 /* Trucks_Icon.png */,
 				8379846114F1D1B3006D14EF /* Favorites_Icon.png */,
+				05763F3715343FF80024C04D /* Screens */,
 			);
 			name = "Tab Bar Group";
 			sourceTree = "<group>";
@@ -379,6 +409,7 @@
 				AADA5C1C14604FB000BC977C /* Buttermilk Truck Menu.tiff */,
 				AADA5C221460776000BC977C /* Lobsta Truck Menu.tiff */,
 				AA2EE2F9147569AC0023BDA0 /* Westside Schedule.tiff */,
+				05763F3F153440E70024C04D /* Login Screen v2 */,
 				05DDFF6C15341571008A5099 /* TruckView */,
 			);
 			name = "Truck Group";
@@ -459,7 +490,6 @@
 				AA0E96A2142277E80098338F /* MapView.xib in Resources */,
 				AA0E96C6142279960098338F /* BlockPartyView.xib in Resources */,
 				AA04BDB21434ECDA00B36634 /* TruckDetailView.xib in Resources */,
-				AAE47AFA144766810069BC48 /* MainWindow.xib in Resources */,
 				AAE47AFF14476DCB0069BC48 /* ContactView.xib in Resources */,
 				AA93919E144B877200CC0203 /* TrucksView.xib in Resources */,
 				AA6BBF34146042EE0084813C /* MenuView.xib in Resources */,
@@ -474,9 +504,6 @@
 				8319A71114F1F889001D72B3 /* Block_Party_Icon.png in Resources */,
 				8319A71214F1F889001D72B3 /* Map_Icon.png in Resources */,
 				8319A71314F1F889001D72B3 /* Trucks_Icon.png in Resources */,
-				0597D06F1521ABA200EA198F /* Login Button Down.png in Resources */,
-				0597D0701521ABA200EA198F /* Login Screen Retro v1.png in Resources */,
-				0597D0721521B1E500EA198F /* Login Button Up.png in Resources */,
 				0572EF6D1524C54800F3BC28 /* NewUser.xib in Resources */,
 				0572EF721524C5A300F3BC28 /* ForgotPasswordView.xib in Resources */,
 				05DDFF6615340E8F008A5099 /* TOSettingsView.xib in Resources */,
@@ -486,6 +513,15 @@
 				05DDFF7415341571008A5099 /* MenuDown.png in Resources */,
 				05DDFF7515341571008A5099 /* ScheduleDown.png in Resources */,
 				05DDFF7615341571008A5099 /* TruckViewBG.png in Resources */,
+				05DDFF7D1534353B008A5099 /* MainWindow.xib in Resources */,
+				05763F3B15343FF80024C04D /* MenuBG.png in Resources */,
+				05763F3C15343FF80024C04D /* ScheduleBG.png in Resources */,
+				05763F3D15343FF80024C04D /* SettingsBG.png in Resources */,
+				05763F45153440E70024C04D /* LoginButtonDown.png in Resources */,
+				05763F46153440E70024C04D /* LoginButtonUp.png in Resources */,
+				05763F47153440E70024C04D /* LoginScreenBG.png in Resources */,
+				05763F48153440E70024C04D /* LostPasswordDown.png in Resources */,
+				05763F49153440E70024C04D /* NewUserDown.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
