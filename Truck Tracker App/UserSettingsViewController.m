@@ -113,9 +113,10 @@
     viewController4.tabBarItem.image = [UIImage imageNamed:@"history.png"];
     viewController5.tabBarItem.image = [UIImage imageNamed:@"charges.png"];
     viewController7.tabBarItem.image = [UIImage imageNamed:@"shoebox.png"];*/
-    
-    delegate.tabBarController = [[UITabBarController alloc] init];
-    delegate.tabBarController.selectedIndex = 0;
+
+// JD: You are changing the existing tab bar controller, not creating a new one.
+//    delegate.tabBarController = [[UITabBarController alloc] init];
+//    delegate.tabBarController.selectedIndex = 0;
     
     if(selectedPerson.type == @"Truck Owner"){
         delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1,  viewController2, viewController3, viewController4, viewController6, nil];
@@ -124,8 +125,11 @@
         delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2,viewController3, viewController4, viewController5,  nil];
     }
     delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, viewController5, viewController6, nil];
-    delegate.tabBarController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self.navigationController pushViewController:delegate.tabBarController animated:YES];
+
+// JD: No need for modal transitions here: you have just changed a tab bar controller
+//     that is already in place, so there is no need to re-add it.
+//    delegate.tabBarController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+//    [self.navigationController pushViewController:delegate.tabBarController animated:YES];
 }
 
 #pragma mark - Buttons
