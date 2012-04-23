@@ -209,6 +209,31 @@
 						<reference key="IBUIFontDescription" ref="260601466"/>
 						<reference key="IBUIFont" ref="76222745"/>
 					</object>
+					<object class="IBUIButton" id="903545885">
+						<reference key="NSNextResponder" ref="878445161"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{124, 194}, {72, 37}}</string>
+						<reference key="NSSuperview" ref="878445161"/>
+						<reference key="NSWindow"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">+</string>
+						<reference key="IBUIHighlightedTitleColor" ref="769010758"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="340584501"/>
+						<object class="IBUIFontDescription" key="IBUIFontDescription">
+							<int key="type">2</int>
+							<double key="pointSize">15</double>
+						</object>
+						<reference key="IBUIFont" ref="76222745"/>
+					</object>
 				</object>
 				<string key="NSFrame">{{0, 64}, {320, 372}}</string>
 				<reference key="NSSuperview"/>
@@ -252,12 +277,12 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">displayBatman:</string>
+						<string key="label">displayContact:</string>
 						<reference key="source" ref="85619898"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">14</int>
+					<int key="connectionID">30</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -285,6 +310,15 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">28</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">addTruckToFavorites:</string>
+						<reference key="source" ref="903545885"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">32</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -320,6 +354,7 @@
 							<reference ref="85619898"/>
 							<reference ref="47120885"/>
 							<reference ref="216127522"/>
+							<reference ref="903545885"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -353,6 +388,11 @@
 						<reference key="object" ref="604614289"/>
 						<reference key="parent" ref="878445161"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">31</int>
+						<reference key="object" ref="903545885"/>
+						<reference key="parent" ref="878445161"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -374,6 +414,7 @@
 					<string>23.IBPluginDependency</string>
 					<string>23.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
 					<string>29.IBPluginDependency</string>
+					<string>31.IBPluginDependency</string>
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -392,6 +433,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="2"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -406,7 +448,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">29</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -418,13 +460,15 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>displayBatman:</string>
+							<string>addTruckToFavorites:</string>
+							<string>displayContact:</string>
 							<string>displayMap:</string>
 							<string>displayMenu:</string>
 							<string>displaySchedule:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -435,7 +479,8 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>displayBatman:</string>
+							<string>addTruckToFavorites:</string>
+							<string>displayContact:</string>
 							<string>displayMap:</string>
 							<string>displayMenu:</string>
 							<string>displaySchedule:</string>
@@ -443,7 +488,11 @@
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
-								<string key="name">displayBatman:</string>
+								<string key="name">addTruckToFavorites:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">displayContact:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

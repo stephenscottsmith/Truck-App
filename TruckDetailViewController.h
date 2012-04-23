@@ -18,12 +18,14 @@
 @property (nonatomic, retain) Truck *truck;
 @property (nonatomic, retain) IBOutlet UITextField *cuisineTextField;
 
--(IBAction)displayBatman:(id)sender;
+-(IBAction)displayContact:(id)sender;
 
 -(IBAction)displayMenu:(id)sender;
 
 -(IBAction)displayMap:(id)sender;
 
 -(IBAction)displaySchedule:(id)sender;
+
+-(IBAction)addTruckToFavorites:(id)sender;
 
 @end

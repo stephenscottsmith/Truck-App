@@ -10,7 +10,7 @@
 #import "Truck_Tracker_AppAppDelegate.h"
 #import "LoginViewController.h"
 
-#import "TruckDetailViewController.h"
+#import "TrucksViewController.h"
 #import "BlockPartyViewController.h"
 #import "MapViewController.h"
 #import "MapViewController.h"
@@ -93,38 +93,37 @@
     }
     
     Truck_Tracker_AppAppDelegate *delegate = (Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate;
-    UIViewController *viewController1 = [[TruckDetailViewController alloc] initWithNibName:@"TruckDetailView" bundle:nil];
-    UIViewController *viewController2 = [[BlockPartyViewController alloc] initWithNibName:@"BlockPartyView" bundle:nil];
-    UIViewController *viewController3 = [[FavoritesViewController alloc] initWithNibName:@"FavoritesView" bundle:nil];
+    UIViewController *viewController1 = [[TrucksViewController alloc] initWithNibName:@"TrucksView" bundle:nil];
+    UIViewController *viewController2 = [[FavoritesViewController alloc] initWithNibName:@"FavoritesView" bundle:nil];
+    UIViewController *viewController3 = [[BlockPartyViewController alloc] initWithNibName:@"BlockPartyView" bundle:nil];
     UIViewController *viewController4 = [[MapViewController alloc] initWithNibName:@"MapView" bundle:nil];
     UIViewController *viewController5 = [[UserSettingsViewController alloc] initWithNibName:@"UserSettingsView" bundle:nil];
     UIViewController *viewController6 = [[TOSettingsViewController alloc] initWithNibName:@"TOSettingsView" bundle:nil];
     
-    ///   tab button title
-    /*viewController1.title = @"Basic information";
-    viewController2.title = @"Misc Quotation";
-    viewController4.title = @"Quotation Line";
-    viewController5.title = @"Charges";
-    viewController7.title = @"Sales Part Stock";
+    // tab button title
+    viewController1.title = @"Trucks";
+    viewController2.title = @"Map";
+    viewController3.title = @"Block Party";
+    viewController4.title = @"Favorites";
+    viewController5.title = @"Settings";
+    viewController6.title = @"Settings";
     
     // tab button Images
-    viewController1.tabBarItem.image = [UIImage imageNamed:@"general.png"];
-    viewController2.tabBarItem.image = [UIImage imageNamed:@"misle.png"];
-    viewController4.tabBarItem.image = [UIImage imageNamed:@"history.png"];
-    viewController5.tabBarItem.image = [UIImage imageNamed:@"charges.png"];
-    viewController7.tabBarItem.image = [UIImage imageNamed:@"shoebox.png"];*/
+    viewController1.tabBarItem.image = [UIImage imageNamed:@"Trucks_Icon.png"];
+    viewController2.tabBarItem.image = [UIImage imageNamed:@"Map_Icon.png"];
+    viewController3.tabBarItem.image = [UIImage imageNamed:@"Block_Party_Icon.png"];
+    viewController4.tabBarItem.image = [UIImage imageNamed:@"Favorites_Icon.png"];
+    viewController5.tabBarItem.image = [UIImage imageNamed:nil];
+    viewController6.tabBarItem.image = [UIImage imageNamed:nil];
 
-// JD: You are changing the existing tab bar controller, not creating a new one.
-//    delegate.tabBarController = [[UITabBarController alloc] init];
-//    delegate.tabBarController.selectedIndex = 0;
     
-    if(selectedPerson.type == @"Truck Owner"){
+    if (selectedPerson.type == @"Truck Owner"){
         delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1,  viewController2, viewController3, viewController4, viewController6, nil];
     }
     else{
         delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2,viewController3, viewController4, viewController5,  nil];
     }
-    delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, viewController5, viewController6, nil];
+  
 
 // JD: No need for modal transitions here: you have just changed a tab bar controller
 //     that is already in place, so there is no need to re-add it.

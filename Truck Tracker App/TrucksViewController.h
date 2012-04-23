@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Truck_Tracker_AppAppDelegate.h"
-#import "LoginViewController.h"
+
 
 @interface TrucksViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 {

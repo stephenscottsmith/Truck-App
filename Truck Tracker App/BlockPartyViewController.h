@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "Truck.h"
+#import "BlockParty.h"
+#import "Truck_Tracker_AppAppDelegate.h"
 
 
 @interface BlockPartyViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 {
-	NSArray			*listContent;			// The master content.
-	NSMutableArray	*filteredListContent;	// The content filtered as a result of a search.
+	NSArray			*listParty;			// The master content.
+	NSMutableArray	*filteredListParty;	// The content filtered as a result of a search.
     Truck *truck;
+    BlockParty *blockparty;
 	
 	// The saved state of the search UI if a memory warning removed the view.
     NSString		*savedSearchTerm;
@@ -22,9 +25,10 @@
     BOOL			searchWasActive;
 }
 
-@property (nonatomic, retain) NSArray *listContent;
-@property (nonatomic, retain) NSMutableArray *filteredListContent;
+@property (nonatomic, retain) NSArray *listParty;
+@property (nonatomic, retain) NSMutableArray *filteredListParty;
 @property (nonatomic, retain) Truck *truck;
+@property (nonatomic, retain) BlockParty *blockparty;
 
 @property (nonatomic, copy) NSString *savedSearchTerm;
 @property (nonatomic) NSInteger savedScopeButtonIndex;

@@ -24,9 +24,6 @@
     Truck *selectedTruck; // The currently chosen truck.
 	
 	// The saved state of the search UI if a memory warning removed the view.
-    NSString		*savedSearchTerm;
-    NSInteger		savedScopeButtonIndex;
-    BOOL			searchWasActive;
     
     NSMutableArray  *listPeople;
     Person          *selectedPerson;
@@ -34,15 +31,15 @@
     NSArray         *listParty;
     BlockParty      *selectedBlockParty;
     
+    NSMutableArray  *listOfTrucks;
+    
 }
+
+@property (nonatomic, retain) NSMutableArray *listOfTrucks;
 
 @property (nonatomic, retain) NSArray *listContent;
 @property (nonatomic, retain) NSMutableArray *filteredListContent;
 @property (nonatomic, retain) Truck *selectedTruck;
-
-@property (nonatomic, copy) NSString *savedSearchTerm;
-@property (nonatomic) NSInteger savedScopeButtonIndex;
-@property (nonatomic) BOOL searchWasActive;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

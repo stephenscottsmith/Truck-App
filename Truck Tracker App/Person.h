@@ -13,11 +13,13 @@
     NSString *email;
     NSString *password;
     NSString *type;
+    NSMutableArray *userFavoritesList;
     
 }
 
-@property (nonatomic, copy) NSString *email, *password, *type;
+@property (nonatomic, copy) NSString *email, *password, *type; 
+@property (nonatomic, copy) NSMutableArray *userFavoritesList;
 
-+ (id)personWithEmail:(NSString *)email password:(NSString *)password type:(NSString *)type;
++ (id)personWithEmail:(NSString *)email password:(NSString *)password type:(NSString *)type userFavoritesList:(NSMutableArray *)userFavoritesList;
 
 @end

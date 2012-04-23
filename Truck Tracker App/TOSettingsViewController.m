@@ -54,7 +54,7 @@
 
 -(void)loginViewControllerDidFinish:(LoginViewController *)controller
 {
-    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text];
+    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text ];
     
     if ([((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople containsObject:
          selectedPerson])

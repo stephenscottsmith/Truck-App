@@ -14,6 +14,9 @@
 #import "ScheduleViewController.h"
 #import "Truck_Tracker_AppAppDelegate.h"
 
+#import "TrucksViewController.h"
+#import "FavoritesViewController.h"
+
 @implementation TruckDetailViewController
 
 @synthesize truck;
@@ -63,12 +66,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(IBAction)displayBatman:(id)sender
+-(IBAction)displayContact:(id)sender
 {
-    UIViewController *detailsViewController = [[ContactViewController alloc] initWithNibName:@"ContactView" bundle:nil];
+    ContactViewController *detailsViewController = [[ContactViewController alloc] initWithNibName:@"ContactView" bundle:nil];
     
 
-	detailsViewController.title = @"Batman";
+	detailsViewController.title = @"Contact";
     
     [[self navigationController] pushViewController:detailsViewController animated:YES];
     [detailsViewController release];
@@ -106,6 +109,12 @@
     
     [[self navigationController] pushViewController:detailsViewController animated:YES];
     [detailsViewController release];
+}
+
+-(IBAction)addTruckToFavorites:(id)sender
+{
+    [((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listOfTrucks addObject: self.truck];
+
 }
 
 @end

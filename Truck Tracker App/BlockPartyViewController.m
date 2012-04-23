@@ -9,10 +9,11 @@
 #import "BlockPartyViewController.h"
 #import "Truck.h"
 #import "Truck_Tracker_AppAppDelegate.h"
+#import "BlockPartyDetailViewController.h"
 
 @implementation BlockPartyViewController
 
-@synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck;
+@synthesize listParty, filteredListParty, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck, blockparty;
 
 
 #pragma mark - 
@@ -20,10 +21,10 @@
 
 - (void)viewDidLoad
 {	
-    self.listContent = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listParty;
+    self.listParty = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listParty;
     
 	// create a filtered list that will contain products for the search results table.
-	self.filteredListContent = [NSMutableArray arrayWithCapacity:[self.listContent count]];
+	self.filteredListParty = [NSMutableArray arrayWithCapacity:[self.listParty count]];
 	
 	// restore search settings if they were saved in didReceiveMemoryWarning.
     if (self.savedSearchTerm)
@@ -41,7 +42,7 @@
 
 - (void)viewDidUnload
 {
-	self.filteredListContent = nil;
+	self.filteredListParty = nil;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -54,8 +55,8 @@
 
 - (void)dealloc
 {
-	[listContent release];
-	[filteredListContent release];
+	[listParty release];
+	[filteredListParty release];
 	
 	[super dealloc];
 }
@@ -73,11 +74,11 @@
     
 	if (tableView == self.searchDisplayController.searchResultsTableView)
     	{
-            return [self.filteredListContent count];
+            return [self.filteredListParty count];
         }
     	else
     	{
-            return [self.listContent count];
+            return [self.listParty count];
         }
     
 }
@@ -98,42 +99,43 @@
     //	 If the requesting table view is the search display controller's table view, configure the cell using the filtered content, otherwise use the main list.
     //	 */
     	//This returns the  block party.
-    BlockParty *blockparty;
+    
+    BlockParty *blockPartyToDisplay;
         if (tableView == self.searchDisplayController.searchResultsTableView)
     	{
-            blockparty = [self.filteredListContent objectAtIndex:indexPath.row];
+            blockPartyToDisplay = [self.filteredListParty objectAtIndex:indexPath.row];
         }
     	else
     	{
-            blockparty = [self.listContent objectAtIndex:indexPath.row];
+            blockPartyToDisplay = [self.listParty objectAtIndex:indexPath.row];
         }
 	
-	cell.textLabel.text = blockparty.name;
+	cell.textLabel.text = blockPartyToDisplay.name;
 	return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    BlockPartyViewController *detailsViewController = [[BlockDetailViewController alloc] initWithNibName:@"TruckDetailView" bundle:nil];
-//    
+    BlockPartyDetailViewController *detailsViewController = [[BlockPartyDetailViewController alloc] initWithNibName:@"BlockPartyDetailView" bundle:nil];
+    
 	/*
 	 If the requesting table view is the search display controller's table view, configure the next view controller using the filtered content, otherwise use the main list.
 	 */
-//	if (tableView == self.searchDisplayController.searchResultsTableView)
-//	{
-//        truck = [self.filteredListContent objectAtIndex:indexPath.row];
-//    }
-//	else
-//	{
-//        truck = [self.listContent objectAtIndex:indexPath.row];
-//    }
-//	detailsViewController.title = truck.name;
-//    detailsViewController.truck = truck;
-//    
-//    
-//    [[self navigationController] pushViewController:detailsViewController animated:YES];
-//    [detailsViewController release];
+	if (tableView == self.searchDisplayController.searchResultsTableView)
+	{
+        blockparty = [self.filteredListParty objectAtIndex:indexPath.row];
+    }
+	else
+	{
+        blockparty = [self.listParty objectAtIndex:indexPath.row];
+    }
+	detailsViewController.title = blockparty.name;
+    detailsViewController.blockparty = blockparty;
+    
+    
+    [[self navigationController] pushViewController:detailsViewController animated:YES];
+    [detailsViewController release];
 }
 
 
@@ -146,19 +148,19 @@
 	 Update the filtered array based on the search text and scope.
 	 */
 	
-	[self.filteredListContent removeAllObjects]; // First clear the filtered array.
+	[self.filteredListParty removeAllObjects]; // First clear the filtered array.
 	
 	/*
 	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
 	 */
-	for (BlockParty *blockparty in listContent)
+	for (BlockParty *filteredBlockParty in listParty)
 	{
-		if ([scope isEqualToString:@"All"] || [blockparty.name isEqualToString:scope])
+		if ([scope isEqualToString:@"All"] || [filteredBlockParty.name isEqualToString:scope])
 		{
-			NSComparisonResult result = [blockparty.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+			NSComparisonResult result = [filteredBlockParty.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
             if (result == NSOrderedSame)
 			{
-				[self.filteredListContent addObject:blockparty];
+				[self.filteredListParty addObject:filteredBlockParty];
             }
 		}
 	}

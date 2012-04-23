@@ -9,14 +9,15 @@
 #import "TrucksViewController.h"
 #import "TruckDetailViewController.h"
 #import "Truck_Tracker_AppAppDelegate.h"
-#import "LoginViewController.h"
+
 
 @implementation TrucksViewController
 
 @synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck;
 
 // Private convenience method for grabbing our app delegate.
-- (Truck_Tracker_AppAppDelegate *)appDelegate {
+- (Truck_Tracker_AppAppDelegate *)appDelegate 
+{
     return (Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate;
 }
 
@@ -109,17 +110,17 @@
     //	/*
     //	 If the requesting table view is the search display controller's table view, configure the cell using the filtered content, otherwise use the main list.
     //	 */
-    Truck *truck = nil;
+    Truck *truckToDisplay = nil;
     if (tableView == self.searchDisplayController.searchResultsTableView)
     {
-        truck = [self.filteredListContent objectAtIndex:indexPath.row];
+        truckToDisplay = [self.filteredListContent objectAtIndex:indexPath.row];
     }
     else
     {
-        truck = [self.listContent objectAtIndex:indexPath.row];
+        truckToDisplay = [self.listContent objectAtIndex:indexPath.row];
     }
 	
-	cell.textLabel.text = truck.name;
+	cell.textLabel.text = truckToDisplay.name;
 	return cell;
 }
 
@@ -131,17 +132,17 @@
 	/*
 	 If the requesting table view is the search display controller's table view, configure the next view controller using the filtered content, otherwise use the main list.
 	 */
-	Truck *truck = nil;
+	Truck *selectedTruck = nil;
 	if (tableView == self.searchDisplayController.searchResultsTableView)
 	{
-        truck = [self.filteredListContent objectAtIndex:indexPath.row];
+        selectedTruck = [self.filteredListContent objectAtIndex:indexPath.row];
     }
 	else
 	{
-        truck = [self.listContent objectAtIndex:indexPath.row];
+        selectedTruck = [self.listContent objectAtIndex:indexPath.row];
     }
-	detailsViewController.title = truck.name;
-	detailsViewController.truck = truck;
+	detailsViewController.title = selectedTruck.name;
+	detailsViewController.truck = selectedTruck;
     
     [[self navigationController] pushViewController:detailsViewController animated:YES];
     [detailsViewController release];
@@ -162,15 +163,15 @@
 	/*
 	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
 	 */
-	for (Truck *truck in listContent)
+	for (Truck *filteredTruck in listContent)
 	{
-        if ([scope isEqualToString:@"All"] || [truck.cuisine isEqualToString:scope])
+        if ([scope isEqualToString:@"All"] || [filteredTruck.cuisine isEqualToString:scope])
 		{
-			NSComparisonResult result = [truck.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+			NSComparisonResult result = [filteredTruck.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
           if (result == NSOrderedSame)
 			{
                 NSLog (@"adding truck");
-			[self.filteredListContent addObject:truck];
+			[self.filteredListContent addObject:filteredTruck];
             }
 		}
 	}

@@ -13,6 +13,8 @@
 		0528DB6B14E19E8200BAE4ED /* BlockParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6A14E19E8100BAE4ED /* BlockParty.m */; };
 		0528DB6F14E19FF200BAE4ED /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6D14E19FF000BAE4ED /* LoginViewController.m */; };
 		0528DB7014E19FF200BAE4ED /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0528DB6E14E19FF100BAE4ED /* LoginView.xib */; };
+		0543693F153DDE0200AEFDA5 /* BlockPartyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543693D153DDE0200AEFDA5 /* BlockPartyDetailViewController.m */; };
+		05436940153DDE0200AEFDA5 /* BlockPartyDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0543693E153DDE0200AEFDA5 /* BlockPartyDetailView.xib */; };
 		0572EF6C1524C54800F3BC28 /* NewUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572EF6A1524C54800F3BC28 /* NewUserController.m */; };
 		0572EF6D1524C54800F3BC28 /* NewUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572EF6B1524C54800F3BC28 /* NewUser.xib */; };
 		0572EF711524C5A300F3BC28 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572EF6F1524C5A300F3BC28 /* ForgotPasswordViewController.m */; };
@@ -98,6 +100,9 @@
 		0528DB6C14E19FF000BAE4ED /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0528DB6D14E19FF000BAE4ED /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0528DB6E14E19FF100BAE4ED /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		0543693C153DDE0200AEFDA5 /* BlockPartyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockPartyDetailViewController.h; sourceTree = "<group>"; };
+		0543693D153DDE0200AEFDA5 /* BlockPartyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockPartyDetailViewController.m; sourceTree = "<group>"; };
+		0543693E153DDE0200AEFDA5 /* BlockPartyDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlockPartyDetailView.xib; sourceTree = "<group>"; };
 		0572EF691524C54800F3BC28 /* NewUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewUserController.h; sourceTree = "<group>"; };
 		0572EF6A1524C54800F3BC28 /* NewUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewUserController.m; sourceTree = "<group>"; };
 		0572EF6B1524C54800F3BC28 /* NewUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewUser.xib; sourceTree = "<group>"; };
@@ -207,6 +212,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05436942153F552300AEFDA5 /* Tab Bar Icons */ = {
+			isa = PBXGroup;
+			children = (
+				8379846114F1D1B3006D14EF /* Favorites_Icon.png */,
+				8319A71014F1F889001D72B3 /* Trucks_Icon.png */,
+				8319A70F14F1F889001D72B3 /* Map_Icon.png */,
+				8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */,
+			);
+			name = "Tab Bar Icons";
+			sourceTree = "<group>";
+		};
 		0572EF671524C48600F3BC28 /* Login Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +264,9 @@
 		05D7718F14E42B650039113F /* Block Party Group */ = {
 			isa = PBXGroup;
 			children = (
+				0543693C153DDE0200AEFDA5 /* BlockPartyDetailViewController.h */,
+				0543693D153DDE0200AEFDA5 /* BlockPartyDetailViewController.m */,
+				0543693E153DDE0200AEFDA5 /* BlockPartyDetailView.xib */,
 			);
 			name = "Block Party Group";
 			sourceTree = "<group>";
@@ -379,10 +398,7 @@
 				0528DB6714E1993E00BAE4ED /* Person.m */,
 				0528DB6914E19E8000BAE4ED /* BlockParty.h */,
 				0528DB6A14E19E8100BAE4ED /* BlockParty.m */,
-				8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */,
-				8319A70F14F1F889001D72B3 /* Map_Icon.png */,
-				8319A71014F1F889001D72B3 /* Trucks_Icon.png */,
-				8379846114F1D1B3006D14EF /* Favorites_Icon.png */,
+				05436942153F552300AEFDA5 /* Tab Bar Icons */,
 				05763F3715343FF80024C04D /* Screens */,
 			);
 			name = "Tab Bar Group";
@@ -522,6 +538,7 @@
 				05763F47153440E70024C04D /* LoginScreenBG.png in Resources */,
 				05763F48153440E70024C04D /* LostPasswordDown.png in Resources */,
 				05763F49153440E70024C04D /* NewUserDown.png in Resources */,
+				05436940153DDE0200AEFDA5 /* BlockPartyDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +594,7 @@
 				0572EF711524C5A300F3BC28 /* ForgotPasswordViewController.m in Sources */,
 				05DDFF6515340E8F008A5099 /* TOSettingsViewController.m in Sources */,
 				05DDFF6A15340F1A008A5099 /* UserSettingsViewController.m in Sources */,
+				0543693F153DDE0200AEFDA5 /* BlockPartyDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

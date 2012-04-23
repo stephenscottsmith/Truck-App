@@ -32,6 +32,9 @@
 				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
+			<object class="IBUISearchDisplayController" id="913197749">
+				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+			</object>
 			<object class="IBUITableView" id="873029372">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
@@ -42,7 +45,6 @@
 						<string key="NSFrameSize">{320, 44}</string>
 						<reference key="NSSuperview" ref="873029372"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:814</string>
 						<int key="IBUIContentMode">3</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -72,9 +74,6 @@
 				<float key="IBUISectionHeaderHeight">22</float>
 				<float key="IBUISectionFooterHeight">22</float>
 				<reference key="IBUITableHeaderView" ref="345317919"/>
-			</object>
-			<object class="IBUISearchDisplayController" id="913197749">
-				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">

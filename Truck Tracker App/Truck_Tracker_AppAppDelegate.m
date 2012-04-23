@@ -15,8 +15,8 @@
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
-@synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive,
-            coordinate, selectedTruck, listPeople, selectedPerson, listParty, selectedBlockParty;
+@synthesize listContent, filteredListContent,
+            coordinate, selectedTruck, listPeople, selectedPerson, listParty, selectedBlockParty, listOfTrucks;
 
 
 /*self.tabBarController = [[UITabBarController alloc] init];
@@ -24,12 +24,6 @@ self.tabBarController.delegate=self;
 self.tabBarController.selectedIndex=0;
 self.tabBarController.delegate=self;*/
 
-- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
-{
-    NSUInteger index=[[tabBarController viewControllers] indexOfObject:viewController];
-    
-     return YES;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -53,19 +47,21 @@ self.tabBarController.delegate=self;*/
                                   latitude: [NSNumber numberWithDouble: 33.9698156] longitude: [NSNumber numberWithDouble: -118.4185009] schedule: nil],
                    nil];
     selectedTruck = nil;
-    NSLog(@"delegate: %d", [listContent count]);    
+    NSLog(@"delegate: %d", [listContent count]);   
+    
+    listOfTrucks = [[NSMutableArray alloc] init];  
     
     //Initialize the mock database of users.
     listPeople = [[NSMutableArray alloc] initWithObjects:
-                  [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test" type:@"User"],
-                  [Person personWithEmail:@"dondi@lmu.edu" password:@"test" type:@"Truck Owner"],
+                  [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test" type:@"User" userFavoritesList:nil],
+                  [Person personWithEmail:@"dondi@lmu.edu" password:@"test" type:@"Truck Owner" userFavoritesList:listOfTrucks],
                   nil];
     selectedPerson = nil;
    
     //Initialize the mock database of block parties.
     listParty = [[NSArray alloc] initWithObjects:
-                 [BlockParty blockpartyWithName:@"Westside Food Truck Central"],
-                 [BlockParty blockpartyWithName:@"Venice Food Truck Paradise"], 
+                 [BlockParty blockpartyWithName:@"Westside Food Truck Central" listOfTrucks: nil latitude: [NSNumber numberWithDouble:200.1] longitude: [NSNumber numberWithDouble: 146.5] schedule:@"7/15/12" ],
+                 [BlockParty blockpartyWithName:@"Venice Food Truck Paradise" listOfTrucks:nil latitude:nil longitude:nil schedule:nil], 
                 nil];
     selectedBlockParty = nil;
     
