@@ -15,7 +15,7 @@
 
 @implementation FavoritesViewController
 
-@synthesize listOfTrucks, filteredListOfTrucks, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck;
+@synthesize favoritedTrucks, filteredFavoritedTrucks, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -66,11 +66,11 @@
 {
     [super viewDidAppear:animated];
     NSLog(@"It's me!");
-    self.listOfTrucks = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listOfTrucks;
+    self.favoritedTrucks = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).favoritedTrucks;
     
     
 	// create a filtered list that will contain products for the search results table.
-	self.filteredListOfTrucks = [NSMutableArray arrayWithCapacity:[self.listOfTrucks count]]; 
+	self.filteredFavoritedTrucks = [NSMutableArray arrayWithCapacity:[self.favoritedTrucks count]]; 
 	
 	// restore search settings if they were saved in didReceiveMemoryWarning.
     if (self.savedSearchTerm)
@@ -113,14 +113,14 @@
 	 */
     if (tableView == self.searchDisplayController.searchResultsTableView)
     {
-        NSLog(@"filteredListOfTrucks%d", [self.filteredListOfTrucks count]);
-        return [self.filteredListOfTrucks count];
+        NSLog(@"filteredfavoritedTrucks%d", [self.filteredFavoritedTrucks count]);
+        return [self.filteredFavoritedTrucks count];
         
     }
     else
     {
-        NSLog(@"listOfTrucks %d", [self.listOfTrucks count]);
-        return [self.listOfTrucks count];
+        NSLog(@"favoritedTrucks %d", [self.favoritedTrucks count]);
+        return [self.favoritedTrucks count];
     }
     
 }
@@ -143,11 +143,11 @@
     Truck *truckToDisplay = nil;
     if (tableView == self.searchDisplayController.searchResultsTableView)
     {
-        truckToDisplay = [self.filteredListOfTrucks objectAtIndex:indexPath.row];
+        truckToDisplay = [self.filteredFavoritedTrucks objectAtIndex:indexPath.row];
     }
     else
     {
-        truckToDisplay = [self.listOfTrucks objectAtIndex:indexPath.row];
+        truckToDisplay = [self.favoritedTrucks objectAtIndex:indexPath.row];
     }
 	
 	cell.textLabel.text = truckToDisplay.name;
@@ -165,11 +165,11 @@
 	Truck *truckToDisplay = nil;
 	if (tableView == self.searchDisplayController.searchResultsTableView)
 	{
-        truckToDisplay = [self.filteredListOfTrucks objectAtIndex:indexPath.row];
+        truckToDisplay = [self.filteredFavoritedTrucks objectAtIndex:indexPath.row];
     }
 	else
 	{
-        truckToDisplay = [self.listOfTrucks objectAtIndex:indexPath.row];
+        truckToDisplay = [self.favoritedTrucks objectAtIndex:indexPath.row];
     }
 	detailsViewController.title = truckToDisplay.name;
 	detailsViewController.truck = truckToDisplay;
@@ -186,7 +186,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     // If row is deleted, remove it from the list.
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSInteger row = [indexPath row];
-        [self.listOfTrucks removeObjectAtIndex:row];   
+        [self.favoritedTrucks removeObjectAtIndex:row];   
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 
     }

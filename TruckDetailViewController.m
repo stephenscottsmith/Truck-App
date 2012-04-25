@@ -79,7 +79,7 @@
 
 -(IBAction)displayMenu:(id)sender
 {
-    MenuViewController *detailsViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+   MenuViewController *detailsViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
     
     
 	detailsViewController.title = @"Menu";
@@ -111,9 +111,22 @@
     [detailsViewController release];
 }
 
+- (IBAction)alertTruckAlreadyInFavorites:(id)sender
+{
+    UIAlertView *alertView = (UIAlertView *)[[UIAlertView alloc] initWithTitle:@"Alert" message:@"This truck is already in your favorites."delegate: nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
+    [alertView show];
+}
+
 -(IBAction)addTruckToFavorites:(id)sender
 {
-    [((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listOfTrucks addObject: self.truck];
+    if ([((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).favoritedTrucks containsObject:self.truck]) {
+        [self alertTruckAlreadyInFavorites:self];
+    }
+    else {
+        
+        [((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).favoritedTrucks addObject: self.truck];
+    }
+    
 
 }
 

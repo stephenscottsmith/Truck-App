@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "Truck_Tracker_AppAppDelegate.h"
+#import "NewUserController.h"
 
 @implementation LoginViewController
 
@@ -67,6 +68,7 @@
 - (IBAction)login:(id)sender
 {
     [self.delegate loginViewControllerDidFinish:self];
+    NSLog(@"Doing Login");
 }
 
 - (IBAction)alertFailedLogin:(id)sender
@@ -87,13 +89,13 @@
     
     Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text];
     
-    if (![((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople containsObject:
+    if (![((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listUsers containsObject:
          selectedPerson])
         
     {
         Person *newPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text]; 
         
-        [((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople addObject:newPerson];
+        [((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listUsers addObject:newPerson];
         
         // Do whatever is needed upon a successful login.
         [self dismissModalViewControllerAnimated:YES];
@@ -102,6 +104,11 @@
         // Display an error message, and do not dismiss the login screen.
         [controller alertNeedNewUserName:self];
     }
+}
+
+-(IBAction)dismissLogin:(id)sender
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 -(IBAction)forgotPassword:(id)sender

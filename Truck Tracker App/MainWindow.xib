@@ -73,7 +73,7 @@
 				<object class="IBUINavigationController" key="IBUISelectedViewController" id="676921483">
 					<string key="IBUITitle">Favorites</string>
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="1007102394">
-						<string key="IBUITitle">Item</string>
+						<string key="IBUITitle">Favorites</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 					<reference key="IBUIParentViewController" ref="1034742383"/>
@@ -94,9 +94,10 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="NSArray" key="IBUIViewControllers">
+					<object class="NSMutableArray" key="IBUIViewControllers">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="IBUIViewController" id="626519499">
+							<string key="IBUITitle">Favorites</string>
 							<object class="IBUITabBarItem" key="IBUITabBarItem" id="662588808">
 								<string key="IBUITitle">Favorites</string>
 								<object class="NSCustomResource" key="IBUIImage">
@@ -109,7 +110,7 @@
 								<bool key="EncodedWithXMLCoder">YES</bool>
 							</object>
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="833042780">
-								<string key="IBUITitle">Item</string>
+								<string key="IBUITitle">Favorites</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<reference key="IBUIParentViewController" ref="676921483"/>
@@ -238,6 +239,10 @@
 					<object class="IBUIViewController" id="266684282">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="451352356">
 							<string key="IBUITitle">Settings</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">Gear Icon.png</string>
+							</object>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 						<reference key="IBUIToolbarItems" ref="0"/>
@@ -470,6 +475,7 @@
 						<int key="objectID">184</int>
 						<reference key="object" ref="648153920"/>
 						<reference key="parent" ref="676921483"/>
+						<string key="objectName">Navigation Bar - Favorites</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">187</int>
@@ -496,6 +502,7 @@
 						<int key="objectID">188</int>
 						<reference key="object" ref="833042780"/>
 						<reference key="parent" ref="626519499"/>
+						<string key="objectName">Navigation Item - Favorites</string>
 					</object>
 				</object>
 			</object>
@@ -615,6 +622,7 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>Block_Party_Icon.png</string>
 				<string>Favorites_Icon.png</string>
+				<string>Gear Icon.png</string>
 				<string>Map_Icon.png</string>
 				<string>Trucks_Icon.png</string>
 			</object>
@@ -622,6 +630,7 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{48, 32}</string>
 				<string>{48, 32}</string>
+				<string>{26, 26}</string>
 				<string>{48, 32}</string>
 				<string>{48, 32}</string>
 			</object>

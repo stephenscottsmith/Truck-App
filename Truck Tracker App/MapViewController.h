@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Truck.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "Truck.h"
 
 @interface MapViewController : UIViewController
 {
@@ -21,6 +21,5 @@
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
--(IBAction)logout:(id)sender;
 
 @end

@@ -102,7 +102,7 @@
 						<string key="NSFrame">{{160, 83}, {169, 65}}</string>
 						<reference key="NSSuperview" ref="878445161"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="85619898"/>
+						<reference key="NSNextKeyView" ref="903545885"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -191,6 +191,7 @@
 						<string key="NSFrame">{{160, 302}, {169, 62}}</string>
 						<reference key="NSSuperview" ref="878445161"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -215,6 +216,7 @@
 						<string key="NSFrame">{{124, 194}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="878445161"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="85619898"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -415,6 +417,7 @@
 					<string>23.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
 					<string>29.IBPluginDependency</string>
 					<string>31.IBPluginDependency</string>
+					<string>31.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -434,6 +437,7 @@
 					<real value="2"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<real value="2"/>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">

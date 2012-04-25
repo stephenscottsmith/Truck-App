@@ -9,6 +9,15 @@
 #import "TOSettingsViewController.h"
 #import "Truck_Tracker_AppAppDelegate.h"
 
+#import "TrucksViewController.h"
+#import "BlockPartyViewController.h"
+#import "MapViewController.h"
+#import "MapViewController.h"
+#import "FavoritesViewController.h"
+#import "UserSettingsViewController.h"
+
+#import "TOEditCuisineViewController.h"
+
 @interface TOSettingsViewController ()
 
 @end
@@ -52,26 +61,18 @@
     [self presentModalViewController:controller animated:YES];    
 }
 
--(void)loginViewControllerDidFinish:(LoginViewController *)controller
-{
-    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text ];
-    
-    if ([((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople containsObject:
-         selectedPerson])
-        
-    {
-        ((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).selectedPerson = selectedPerson;
-        
-        // Do whatever is needed upon a successful login.
-        [self dismissModalViewControllerAnimated:YES];
-        
-    } else {
-        // Display an error message, and do not dismiss the login screen.
-        [controller alertFailedLogin:self];
-    }
-}
-
 #pragma mark - Buttons
+
+-(IBAction)displayEditCuisine:(id)sender
+{
+    TOEditCuisineViewController *detailsViewController = [[TOEditCuisineViewController alloc] initWithNibName:@"TOEditCuisineView" bundle:nil];
+        
+        
+    detailsViewController.title = @"Edit Cuisine";
+        
+    [[self navigationController] pushViewController:detailsViewController animated:YES];
+    [detailsViewController release];
+}
 
 -(IBAction)logout:(id)sender
 {

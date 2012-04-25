@@ -11,12 +11,14 @@
 #import "Person.h"
 #import "BlockParty.h"
 
+
+
 @implementation Truck_Tracker_AppAppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
-@synthesize listContent, filteredListContent,
-            coordinate, selectedTruck, listPeople, selectedPerson, listParty, selectedBlockParty, listOfTrucks;
+@synthesize listTrucks, filteredListTrucks,
+            coordinate, selectedTruck, listUsers, selectedPerson, listParty, selectedBlockParty, favoritedTrucks;
 
 
 /*self.tabBarController = [[UITabBarController alloc] init];
@@ -35,7 +37,7 @@ self.tabBarController.delegate=self;*/
     [locationManager startUpdatingLocation];
     
     // Initialize the mock database of trucks.
-    listContent = [[NSArray alloc] initWithObjects:
+    listTrucks = [[NSMutableArray alloc] initWithObjects:
                    [Truck truckWithCuisine:@"American Cuisine" name:@"Buttermilk Truck" menu:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Buttermilk Truck Menu.tiff"] latitude: [NSNumber numberWithDouble: 0.1] longitude: [NSNumber numberWithDouble: 0.1]schedule:@"7/15/12"],
                    [Truck truckWithCuisine:@"American Cuisine" name:@"In N Out Burgers" menu:[NSData dataWithContentsOfFile:@"/Users/Steve/Desktop/Truck Tracker App/Truck Tracker App/Lobsta Truck Menu.tiff"]
                                   latitude: [NSNumber numberWithDouble: 23.2] longitude: [NSNumber numberWithDouble: 80.2] schedule: nil],
@@ -47,14 +49,14 @@ self.tabBarController.delegate=self;*/
                                   latitude: [NSNumber numberWithDouble: 33.9698156] longitude: [NSNumber numberWithDouble: -118.4185009] schedule: nil],
                    nil];
     selectedTruck = nil;
-    NSLog(@"delegate: %d", [listContent count]);   
+    NSLog(@"delegate: %d", [listTrucks count]);   
     
-    listOfTrucks = [[NSMutableArray alloc] init];  
+   // favoritedTrucks = [[NSMutableArray alloc] init];  
     
     //Initialize the mock database of users.
-    listPeople = [[NSMutableArray alloc] initWithObjects:
-                  [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test" type:@"User" userFavoritesList:nil],
-                  [Person personWithEmail:@"dondi@lmu.edu" password:@"test" type:@"Truck Owner" userFavoritesList:listOfTrucks],
+    listUsers = [[NSMutableArray alloc] initWithObjects:
+                  [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test" type:@"Eater" userFavoritesList:nil],
+                  [Person personWithEmail:@"dondi@lmu.edu" password:@"test" type:@"Owner" userFavoritesList:favoritedTrucks = [[NSMutableArray alloc] init]],
                   nil];
     selectedPerson = nil;
    
@@ -141,5 +143,9 @@ self.tabBarController.delegate=self;*/
  //   NSLog(@"Got location!");
     self.coordinate = newLocation.coordinate;
 }
+
+# pragma mark - Login Users
+   
+
 
 @end

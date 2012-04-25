@@ -11,8 +11,8 @@
 
 @interface FavoritesViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 {
-    NSMutableArray *listOfTrucks;
-    NSMutableArray *filteredListOfTrucks;
+    NSMutableArray *favoritedTrucks;
+    NSMutableArray *filteredFavoritedTrucks;
     Truck *truck;
     
     NSString        *savedSearchTerm;
@@ -21,8 +21,8 @@
     
 }
 
-@property (nonatomic, retain) NSMutableArray *listOfTrucks;
-@property (nonatomic, retain) NSMutableArray *filteredListOfTrucks;
+@property (nonatomic, retain) NSMutableArray *favoritedTrucks;
+@property (nonatomic, retain) NSMutableArray *filteredFavoritedTrucks;
 @property (nonatomic, retain) Truck *truck;
 
 @property (nonatomic, copy) NSString *savedSearchTerm;

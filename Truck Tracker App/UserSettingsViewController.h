@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginViewController.h"
+#import "SettingsViewController.h"
 
-@interface UserSettingsViewController : UIViewController <LoginViewControllerDelegate>
+@interface UserSettingsViewController : SettingsViewController 
 {
-    
+    UINavigationController *navigationController;
+    UIWindow *window;   
 }
+
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+
+@property (nonatomic,retain) IBOutlet UINavigationController *navigationController;
 
 -(IBAction)logout:(id)sender;
 

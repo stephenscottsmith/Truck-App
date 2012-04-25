@@ -27,6 +27,7 @@
 @property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
 
+- (IBAction)dismissLogin:(id)sender;
 - (IBAction)dismissKeyboard:(id)sender;
 - (IBAction)login:(id)sender;
 - (IBAction)alertFailedLogin:(id)sender;

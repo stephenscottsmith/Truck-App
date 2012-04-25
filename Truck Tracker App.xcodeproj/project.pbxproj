@@ -27,6 +27,9 @@
 		05763F47153440E70024C04D /* LoginScreenBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F42153440E70024C04D /* LoginScreenBG.png */; };
 		05763F48153440E70024C04D /* LostPasswordDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F43153440E70024C04D /* LostPasswordDown.png */; };
 		05763F49153440E70024C04D /* NewUserDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05763F44153440E70024C04D /* NewUserDown.png */; };
+		057CBBEC154703D300B08453 /* TOEditCuisineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057CBBEA154703D300B08453 /* TOEditCuisineViewController.m */; };
+		057CBBED154703D300B08453 /* TOEditCuisineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057CBBEB154703D300B08453 /* TOEditCuisineView.xib */; };
+		0596CE0E15478AEB00DCB454 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0596CE0D15478AEB00DCB454 /* SettingsViewController.m */; };
 		05DDFF6515340E8F008A5099 /* TOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDFF6315340E8E008A5099 /* TOSettingsViewController.m */; };
 		05DDFF6615340E8F008A5099 /* TOSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF6415340E8F008A5099 /* TOSettingsView.xib */; };
 		05DDFF6A15340F1A008A5099 /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDFF6815340F1A008A5099 /* UserSettingsViewController.m */; };
@@ -37,6 +40,8 @@
 		05DDFF7515341571008A5099 /* ScheduleDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF7015341571008A5099 /* ScheduleDown.png */; };
 		05DDFF7615341571008A5099 /* TruckViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF7115341571008A5099 /* TruckViewBG.png */; };
 		05DDFF7D1534353B008A5099 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DDFF7C1534353B008A5099 /* MainWindow.xib */; };
+		05F0FDFD15471776007C014A /* Gear Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F0FDFB15471776007C014A /* Gear Icon.png */; };
+		05F0FDFE15471776007C014A /* Truck Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F0FDFC15471776007C014A /* Truck Button.png */; };
 		8319A71114F1F889001D72B3 /* Block_Party_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */; };
 		8319A71214F1F889001D72B3 /* Map_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A70F14F1F889001D72B3 /* Map_Icon.png */; };
 		8319A71314F1F889001D72B3 /* Trucks_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8319A71014F1F889001D72B3 /* Trucks_Icon.png */; };
@@ -117,6 +122,11 @@
 		05763F42153440E70024C04D /* LoginScreenBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginScreenBG.png; sourceTree = "<group>"; };
 		05763F43153440E70024C04D /* LostPasswordDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LostPasswordDown.png; sourceTree = "<group>"; };
 		05763F44153440E70024C04D /* NewUserDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewUserDown.png; sourceTree = "<group>"; };
+		057CBBE9154703D300B08453 /* TOEditCuisineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOEditCuisineViewController.h; sourceTree = "<group>"; };
+		057CBBEA154703D300B08453 /* TOEditCuisineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOEditCuisineViewController.m; sourceTree = "<group>"; };
+		057CBBEB154703D300B08453 /* TOEditCuisineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOEditCuisineView.xib; sourceTree = "<group>"; };
+		0596CE0C15478AEB00DCB454 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		0596CE0D15478AEB00DCB454 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		05DDFF6215340E8E008A5099 /* TOSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOSettingsViewController.h; sourceTree = "<group>"; };
 		05DDFF6315340E8E008A5099 /* TOSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOSettingsViewController.m; sourceTree = "<group>"; };
 		05DDFF6415340E8F008A5099 /* TOSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOSettingsView.xib; sourceTree = "<group>"; };
@@ -129,6 +139,8 @@
 		05DDFF7015341571008A5099 /* ScheduleDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScheduleDown.png; sourceTree = "<group>"; };
 		05DDFF7115341571008A5099 /* TruckViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TruckViewBG.png; sourceTree = "<group>"; };
 		05DDFF7C1534353B008A5099 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		05F0FDFB15471776007C014A /* Gear Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gear Icon.png"; sourceTree = "<group>"; };
+		05F0FDFC15471776007C014A /* Truck Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Truck Button.png"; sourceTree = "<group>"; };
 		8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block_Party_Icon.png; sourceTree = "<group>"; };
 		8319A70F14F1F889001D72B3 /* Map_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map_Icon.png; sourceTree = "<group>"; };
 		8319A71014F1F889001D72B3 /* Trucks_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trucks_Icon.png; sourceTree = "<group>"; };
@@ -216,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				8379846114F1D1B3006D14EF /* Favorites_Icon.png */,
+				05F0FDFB15471776007C014A /* Gear Icon.png */,
 				8319A71014F1F889001D72B3 /* Trucks_Icon.png */,
 				8319A70F14F1F889001D72B3 /* Map_Icon.png */,
 				8319A70E14F1F889001D72B3 /* Block_Party_Icon.png */,
@@ -259,6 +272,16 @@
 				05763F44153440E70024C04D /* NewUserDown.png */,
 			);
 			path = "Login Screen v2";
+			sourceTree = "<group>";
+		};
+		057CBBE7154701E900B08453 /* TO Edit Settings */ = {
+			isa = PBXGroup;
+			children = (
+				057CBBE9154703D300B08453 /* TOEditCuisineViewController.h */,
+				057CBBEA154703D300B08453 /* TOEditCuisineViewController.m */,
+				057CBBEB154703D300B08453 /* TOEditCuisineView.xib */,
+			);
+			name = "TO Edit Settings";
 			sourceTree = "<group>";
 		};
 		05D7718F14E42B650039113F /* Block Party Group */ = {
@@ -384,12 +407,15 @@
 				AA0E969A142277E80098338F /* MapViewController.h */,
 				AA0E969B142277E80098338F /* MapViewController.m */,
 				AA0E96A0142277E80098338F /* MapView.xib */,
+				0596CE0C15478AEB00DCB454 /* SettingsViewController.h */,
+				0596CE0D15478AEB00DCB454 /* SettingsViewController.m */,
 				05DDFF6715340F1A008A5099 /* UserSettingsViewController.h */,
 				05DDFF6815340F1A008A5099 /* UserSettingsViewController.m */,
 				05DDFF6915340F1A008A5099 /* UserSettingsView.xib */,
 				05DDFF6215340E8E008A5099 /* TOSettingsViewController.h */,
 				05DDFF6315340E8E008A5099 /* TOSettingsViewController.m */,
 				05DDFF6415340E8F008A5099 /* TOSettingsView.xib */,
+				057CBBE7154701E900B08453 /* TO Edit Settings */,
 				AA72C1F9148EA849006FC715 /* TruckAnnotation.h */,
 				AA72C1FA148EA849006FC715 /* TruckAnnotation.m */,
 				AA4CF12914291988003FF4A2 /* Truck.h */,
@@ -410,6 +436,7 @@
 				AA04BDAE1434ECDA00B36634 /* TruckDetailViewController.h */,
 				AA04BDAF1434ECDA00B36634 /* TruckDetailViewController.m */,
 				AA04BDB01434ECDA00B36634 /* TruckDetailView.xib */,
+				05F0FDFC15471776007C014A /* Truck Button.png */,
 				AA22928E146C2EEF0000D6E5 /* TruckMapViewController.h */,
 				AA22928F146C2EEF0000D6E5 /* TruckMapViewController.m */,
 				AA229290146C2EEF0000D6E5 /* TruckMapView.xib */,
@@ -539,6 +566,9 @@
 				05763F48153440E70024C04D /* LostPasswordDown.png in Resources */,
 				05763F49153440E70024C04D /* NewUserDown.png in Resources */,
 				05436940153DDE0200AEFDA5 /* BlockPartyDetailView.xib in Resources */,
+				057CBBED154703D300B08453 /* TOEditCuisineView.xib in Resources */,
+				05F0FDFD15471776007C014A /* Gear Icon.png in Resources */,
+				05F0FDFE15471776007C014A /* Truck Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +625,8 @@
 				05DDFF6515340E8F008A5099 /* TOSettingsViewController.m in Sources */,
 				05DDFF6A15340F1A008A5099 /* UserSettingsViewController.m in Sources */,
 				0543693F153DDE0200AEFDA5 /* BlockPartyDetailViewController.m in Sources */,
+				057CBBEC154703D300B08453 /* TOEditCuisineViewController.m in Sources */,
+				0596CE0E15478AEB00DCB454 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

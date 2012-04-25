@@ -17,28 +17,28 @@
  */
 @interface Truck_Tracker_AppAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, CLLocationManagerDelegate>
 {
-	NSArray			*listContent;			// The master content.
-	NSMutableArray	*filteredListContent;	// The content filtered as a result of a search.
+	NSMutableArray			*listTrucks;			// The master content.
+	NSMutableArray	*filteredListTrucks;	// The content filtered as a result of a search.
 
     CLLocationCoordinate2D coordinate; // The location for the map.
     Truck *selectedTruck; // The currently chosen truck.
 	
 	// The saved state of the search UI if a memory warning removed the view.
     
-    NSMutableArray  *listPeople;
+    NSMutableArray  *listUsers;
     Person          *selectedPerson;
     
     NSArray         *listParty;
     BlockParty      *selectedBlockParty;
     
-    NSMutableArray  *listOfTrucks;
+    NSMutableArray  *favoritedTrucks;
     
 }
 
-@property (nonatomic, retain) NSMutableArray *listOfTrucks;
+@property (nonatomic, retain) NSMutableArray *favoritedTrucks;
 
-@property (nonatomic, retain) NSArray *listContent;
-@property (nonatomic, retain) NSMutableArray *filteredListContent;
+@property (nonatomic, retain) NSMutableArray *listTrucks;
+@property (nonatomic, retain) NSMutableArray *filteredListTrucks;
 @property (nonatomic, retain) Truck *selectedTruck;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -49,7 +49,7 @@
 
 
 @property (nonatomic, retain) Person *selectedPerson;
-@property (nonatomic, retain) NSMutableArray *listPeople;
+@property (nonatomic, retain) NSMutableArray *listUsers;
 
 @property (nonatomic, retain) BlockParty *selectedBlockParty;
 @property (nonatomic, retain) NSArray *listParty;

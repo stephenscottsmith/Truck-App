@@ -8,20 +8,15 @@
 
 #import "UserSettingsViewController.h"
 #import "Truck_Tracker_AppAppDelegate.h"
-#import "LoginViewController.h"
 
-#import "TrucksViewController.h"
-#import "BlockPartyViewController.h"
-#import "MapViewController.h"
-#import "MapViewController.h"
-#import "FavoritesViewController.h"
-#import "TOSettingsViewController.h"
 
 @interface UserSettingsViewController ()
 
 @end
 
 @implementation UserSettingsViewController
+
+@synthesize navigationController, window;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,74 +56,6 @@
     controller.delegate = self;
     controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:controller animated:YES];    
-}
-
--(void)loginViewControllerDidFinish:(LoginViewController *)controller
-{
-//    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text];
-  
-    __block Person *selectedPerson = nil;
-    [((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listPeople enumerateObjectsUsingBlock:^(id person, NSUInteger idx, BOOL *stop) {
-        Person *currentPerson = (Person *)person;
-        if ([currentPerson.email isEqualToString:controller.usernameTextField.text] &&
-                [currentPerson.password isEqualToString:controller.passwordTextField.text]) {
-            selectedPerson = currentPerson;
-            *stop = YES;
-        }
-    }];
-
-    if (selectedPerson != nil)
-        
-    {
-        ((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).selectedPerson = selectedPerson;
-
-        NSLog(@"User type: %@", selectedPerson.type);
-
-        // Do whatever is needed upon a successful login.
-        [self dismissModalViewControllerAnimated:YES];
-        
-    } else {
-        // Display an error message, and do not dismiss the login screen.
-        [controller alertFailedLogin:self];
-    }
-    
-    Truck_Tracker_AppAppDelegate *delegate = (Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate;
-    UIViewController *viewController1 = [[TrucksViewController alloc] initWithNibName:@"TrucksView" bundle:nil];
-    UIViewController *viewController2 = [[FavoritesViewController alloc] initWithNibName:@"FavoritesView" bundle:nil];
-    UIViewController *viewController3 = [[BlockPartyViewController alloc] initWithNibName:@"BlockPartyView" bundle:nil];
-    UIViewController *viewController4 = [[MapViewController alloc] initWithNibName:@"MapView" bundle:nil];
-    UIViewController *viewController5 = [[UserSettingsViewController alloc] initWithNibName:@"UserSettingsView" bundle:nil];
-    UIViewController *viewController6 = [[TOSettingsViewController alloc] initWithNibName:@"TOSettingsView" bundle:nil];
-    
-    // tab button title
-    viewController1.title = @"Trucks";
-    viewController2.title = @"Map";
-    viewController3.title = @"Block Party";
-    viewController4.title = @"Favorites";
-    viewController5.title = @"Settings";
-    viewController6.title = @"Settings";
-    
-    // tab button Images
-    viewController1.tabBarItem.image = [UIImage imageNamed:@"Trucks_Icon.png"];
-    viewController2.tabBarItem.image = [UIImage imageNamed:@"Map_Icon.png"];
-    viewController3.tabBarItem.image = [UIImage imageNamed:@"Block_Party_Icon.png"];
-    viewController4.tabBarItem.image = [UIImage imageNamed:@"Favorites_Icon.png"];
-    viewController5.tabBarItem.image = [UIImage imageNamed:nil];
-    viewController6.tabBarItem.image = [UIImage imageNamed:nil];
-
-    
-    if (selectedPerson.type == @"Truck Owner"){
-        delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1,  viewController2, viewController3, viewController4, viewController6, nil];
-    }
-    else{
-        delegate.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2,viewController3, viewController4, viewController5,  nil];
-    }
-  
-
-// JD: No need for modal transitions here: you have just changed a tab bar controller
-//     that is already in place, so there is no need to re-add it.
-//    delegate.tabBarController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-//    [self.navigationController pushViewController:delegate.tabBarController animated:YES];
 }
 
 #pragma mark - Buttons

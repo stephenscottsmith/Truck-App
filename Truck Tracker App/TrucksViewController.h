@@ -12,8 +12,8 @@
 
 @interface TrucksViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 {
-	NSArray			*listContent;			// The master content.
-	NSMutableArray	*filteredListContent;	// The content filtered as a result of a search.
+	NSArray			*listTrucks;			// The master content.
+	NSMutableArray	*filteredlistTrucks;	// The content filtered as a result of a search.
     Truck           *truck;
 	
 	// The saved state of the search UI if a memory warning removed the view.
@@ -23,8 +23,8 @@
     
 }
 
-@property (nonatomic, retain) NSArray *listContent;
-@property (nonatomic, retain) NSMutableArray *filteredListContent;
+@property (nonatomic, retain) NSArray *listTrucks;
+@property (nonatomic, retain) NSMutableArray *filteredlistTrucks;
 @property (nonatomic, retain) Truck *truck;
 
 @property (nonatomic, copy) NSString *savedSearchTerm;

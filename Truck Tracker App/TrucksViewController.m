@@ -13,7 +13,7 @@
 
 @implementation TrucksViewController
 
-@synthesize listContent, filteredListContent, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck;
+@synthesize listTrucks, filteredlistTrucks, savedSearchTerm, savedScopeButtonIndex, searchWasActive, truck;
 
 // Private convenience method for grabbing our app delegate.
 - (Truck_Tracker_AppAppDelegate *)appDelegate 
@@ -28,11 +28,11 @@
 
 - (void)viewDidLoad
 {
-    self.listContent = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listContent;
+    self.listTrucks = ((Truck_Tracker_AppAppDelegate *)[UIApplication sharedApplication].delegate).listTrucks;
    
 
 	// create a filtered list that will contain products for the search results table.
-	self.filteredListContent = [NSMutableArray arrayWithCapacity:[self.listContent count]]; 
+	self.filteredlistTrucks = [NSMutableArray arrayWithCapacity:[self.listTrucks count]]; 
 	
 	// restore search settings if they were saved in didReceiveMemoryWarning.
     if (self.savedSearchTerm)
@@ -50,7 +50,7 @@
 
 - (void)viewDidUnload
 {
-	self.filteredListContent = nil;
+	self.filteredlistTrucks = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -68,8 +68,8 @@
 
 - (void)dealloc
 {
-	[listContent release];
-	[filteredListContent release];
+	[listTrucks release];
+	[filteredlistTrucks release];
 	
 	[super dealloc];
 }
@@ -86,11 +86,11 @@
 	 */
     if (tableView == self.searchDisplayController.searchResultsTableView)
     {
-        return [self.filteredListContent count];
+        return [self.filteredlistTrucks count];
     }
     else
     {
-        return [self.listContent count];
+        return [self.listTrucks count];
     }
     
 }
@@ -113,11 +113,11 @@
     Truck *truckToDisplay = nil;
     if (tableView == self.searchDisplayController.searchResultsTableView)
     {
-        truckToDisplay = [self.filteredListContent objectAtIndex:indexPath.row];
+        truckToDisplay = [self.filteredlistTrucks objectAtIndex:indexPath.row];
     }
     else
     {
-        truckToDisplay = [self.listContent objectAtIndex:indexPath.row];
+        truckToDisplay = [self.listTrucks objectAtIndex:indexPath.row];
     }
 	
 	cell.textLabel.text = truckToDisplay.name;
@@ -135,11 +135,11 @@
 	Truck *selectedTruck = nil;
 	if (tableView == self.searchDisplayController.searchResultsTableView)
 	{
-        selectedTruck = [self.filteredListContent objectAtIndex:indexPath.row];
+        selectedTruck = [self.filteredlistTrucks objectAtIndex:indexPath.row];
     }
 	else
 	{
-        selectedTruck = [self.listContent objectAtIndex:indexPath.row];
+        selectedTruck = [self.listTrucks objectAtIndex:indexPath.row];
     }
 	detailsViewController.title = selectedTruck.name;
 	detailsViewController.truck = selectedTruck;
@@ -158,12 +158,12 @@
 	 Update the filtered array based on the search text and scope.
 	 */
 	
-	[self.filteredListContent removeAllObjects]; // First clear the filtered array.
+	[self.filteredlistTrucks removeAllObjects]; // First clear the filtered array.
 	
 	/*
 	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
 	 */
-	for (Truck *filteredTruck in listContent)
+	for (Truck *filteredTruck in listTrucks)
 	{
         if ([scope isEqualToString:@"All"] || [filteredTruck.cuisine isEqualToString:scope])
 		{
@@ -171,15 +171,14 @@
           if (result == NSOrderedSame)
 			{
                 NSLog (@"adding truck");
-			[self.filteredListContent addObject:filteredTruck];
+			[self.filteredlistTrucks addObject:filteredTruck];
             }
 		}
 	}
 }
 
 
-#pragma mark -
-#pragma mark UISearchDisplayController Delegate Methods
+#pragma mark - UISearchDisplayController Delegate Methods
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {

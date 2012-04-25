@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginViewController.h"
+#import "SettingsViewController.h"
 
-@interface TOSettingsViewController : UIViewController <LoginViewControllerDelegate>
+@interface TOSettingsViewController : SettingsViewController 
 {
     
 }
 
+-(IBAction)displayEditCuisine:(id)sender;
 -(IBAction)logout:(id)sender;
 
 @end

@@ -71,9 +71,4 @@
     [mapView addAnnotation:truckAnnotation];
 }
 
--(IBAction)logout:(id)sender
-{
-    
-}
-
 @end
