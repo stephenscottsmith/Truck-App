@@ -55,8 +55,8 @@ self.tabBarController.delegate=self;*/
     
     //Initialize the mock database of users.
     listUsers = [[NSMutableArray alloc] initWithObjects:
-                  [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test" type:@"Eater" userFavoritesList:nil],
-                  [Person personWithEmail:@"dondi@lmu.edu" password:@"test" type:@"Owner" userFavoritesList:favoritedTrucks = [[NSMutableArray alloc] init]],
+                 [Person personWithEmail:@"stephen@techgroupintl.com" password:@"test" type:@"Eater" userFavoritesList:nil],
+                 [Person personWithEmail:@"dondi@lmu.edu" password:@"test" type:@"Owner" userFavoritesList:favoritedTrucks = [[NSMutableArray alloc] init]],
                   nil];
     selectedPerson = nil;
    

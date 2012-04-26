@@ -13,6 +13,14 @@
 		0528DB6B14E19E8200BAE4ED /* BlockParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6A14E19E8100BAE4ED /* BlockParty.m */; };
 		0528DB6F14E19FF200BAE4ED /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0528DB6D14E19FF000BAE4ED /* LoginViewController.m */; };
 		0528DB7014E19FF200BAE4ED /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0528DB6E14E19FF100BAE4ED /* LoginView.xib */; };
+		05366E82154887C1003776DE /* EditTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05366E80154887C1003776DE /* EditTweetViewController.m */; };
+		05366E83154887C1003776DE /* EditTweetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05366E81154887C1003776DE /* EditTweetView.xib */; };
+		05366E88154887DC003776DE /* EditMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05366E86154887DC003776DE /* EditMenuViewController.m */; };
+		05366E89154887DC003776DE /* EditMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05366E87154887DC003776DE /* EditMenuView.xib */; };
+		05366E8D154887FB003776DE /* EditScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05366E8B154887FB003776DE /* EditScheduleViewController.m */; };
+		05366E8E154887FB003776DE /* EditScheduleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05366E8C154887FB003776DE /* EditScheduleView.xib */; };
+		05366E9215488813003776DE /* EditContactInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05366E9015488813003776DE /* EditContactInfoViewController.m */; };
+		05366E9315488813003776DE /* EditContactInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05366E9115488813003776DE /* EditContactInfoView.xib */; };
 		0543693F153DDE0200AEFDA5 /* BlockPartyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543693D153DDE0200AEFDA5 /* BlockPartyDetailViewController.m */; };
 		05436940153DDE0200AEFDA5 /* BlockPartyDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0543693E153DDE0200AEFDA5 /* BlockPartyDetailView.xib */; };
 		0572EF6C1524C54800F3BC28 /* NewUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572EF6A1524C54800F3BC28 /* NewUserController.m */; };
@@ -105,6 +113,18 @@
 		0528DB6C14E19FF000BAE4ED /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0528DB6D14E19FF000BAE4ED /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0528DB6E14E19FF100BAE4ED /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		05366E7F154887C1003776DE /* EditTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTweetViewController.h; sourceTree = "<group>"; };
+		05366E80154887C1003776DE /* EditTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTweetViewController.m; sourceTree = "<group>"; };
+		05366E81154887C1003776DE /* EditTweetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTweetView.xib; sourceTree = "<group>"; };
+		05366E85154887DC003776DE /* EditMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMenuViewController.h; sourceTree = "<group>"; };
+		05366E86154887DC003776DE /* EditMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMenuViewController.m; sourceTree = "<group>"; };
+		05366E87154887DC003776DE /* EditMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditMenuView.xib; sourceTree = "<group>"; };
+		05366E8A154887FA003776DE /* EditScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditScheduleViewController.h; sourceTree = "<group>"; };
+		05366E8B154887FB003776DE /* EditScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditScheduleViewController.m; sourceTree = "<group>"; };
+		05366E8C154887FB003776DE /* EditScheduleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditScheduleView.xib; sourceTree = "<group>"; };
+		05366E8F15488813003776DE /* EditContactInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactInfoViewController.h; sourceTree = "<group>"; };
+		05366E9015488813003776DE /* EditContactInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactInfoViewController.m; sourceTree = "<group>"; };
+		05366E9115488813003776DE /* EditContactInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditContactInfoView.xib; sourceTree = "<group>"; };
 		0543693C153DDE0200AEFDA5 /* BlockPartyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockPartyDetailViewController.h; sourceTree = "<group>"; };
 		0543693D153DDE0200AEFDA5 /* BlockPartyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockPartyDetailViewController.m; sourceTree = "<group>"; };
 		0543693E153DDE0200AEFDA5 /* BlockPartyDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlockPartyDetailView.xib; sourceTree = "<group>"; };
@@ -277,9 +297,21 @@
 		057CBBE7154701E900B08453 /* TO Edit Settings */ = {
 			isa = PBXGroup;
 			children = (
+				05366E7F154887C1003776DE /* EditTweetViewController.h */,
+				05366E80154887C1003776DE /* EditTweetViewController.m */,
+				05366E81154887C1003776DE /* EditTweetView.xib */,
 				057CBBE9154703D300B08453 /* TOEditCuisineViewController.h */,
 				057CBBEA154703D300B08453 /* TOEditCuisineViewController.m */,
 				057CBBEB154703D300B08453 /* TOEditCuisineView.xib */,
+				05366E85154887DC003776DE /* EditMenuViewController.h */,
+				05366E86154887DC003776DE /* EditMenuViewController.m */,
+				05366E87154887DC003776DE /* EditMenuView.xib */,
+				05366E8A154887FA003776DE /* EditScheduleViewController.h */,
+				05366E8B154887FB003776DE /* EditScheduleViewController.m */,
+				05366E8C154887FB003776DE /* EditScheduleView.xib */,
+				05366E8F15488813003776DE /* EditContactInfoViewController.h */,
+				05366E9015488813003776DE /* EditContactInfoViewController.m */,
+				05366E9115488813003776DE /* EditContactInfoView.xib */,
 			);
 			name = "TO Edit Settings";
 			sourceTree = "<group>";
@@ -569,6 +601,10 @@
 				057CBBED154703D300B08453 /* TOEditCuisineView.xib in Resources */,
 				05F0FDFD15471776007C014A /* Gear Icon.png in Resources */,
 				05F0FDFE15471776007C014A /* Truck Button.png in Resources */,
+				05366E83154887C1003776DE /* EditTweetView.xib in Resources */,
+				05366E89154887DC003776DE /* EditMenuView.xib in Resources */,
+				05366E8E154887FB003776DE /* EditScheduleView.xib in Resources */,
+				05366E9315488813003776DE /* EditContactInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +663,10 @@
 				0543693F153DDE0200AEFDA5 /* BlockPartyDetailViewController.m in Sources */,
 				057CBBEC154703D300B08453 /* TOEditCuisineViewController.m in Sources */,
 				0596CE0E15478AEB00DCB454 /* SettingsViewController.m in Sources */,
+				05366E82154887C1003776DE /* EditTweetViewController.m in Sources */,
+				05366E88154887DC003776DE /* EditMenuViewController.m in Sources */,
+				05366E8D154887FB003776DE /* EditScheduleViewController.m in Sources */,
+				05366E9215488813003776DE /* EditContactInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

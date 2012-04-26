@@ -14,7 +14,11 @@
     
 }
 
--(IBAction)displayEditCuisine:(id)sender;
+-(IBAction)editTweet:(id)sender;
+-(IBAction)editCuisine:(id)sender;
+-(IBAction)editMenu:(id)sender;
+-(IBAction)editSchedule:(id)sender;
+-(IBAction)editContactInfo:(id)sender;
 -(IBAction)logout:(id)sender;
 
 @end

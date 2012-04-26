@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Truck.h"
 
 @interface Person : NSObject
 {
@@ -14,6 +15,7 @@
     NSString *password;
     NSString *type;
     NSMutableArray *userFavoritesList;
+   // Truck *personsTruck;
     
 }
 

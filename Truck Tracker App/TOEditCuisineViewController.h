@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface TOEditCuisineViewController : UIViewController
+{
+    NSArray *listCuisine;
+}
+
+@property (nonatomic, retain) NSArray *listCuisine;
 
 
 @end

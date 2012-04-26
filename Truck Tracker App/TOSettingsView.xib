@@ -38,10 +38,9 @@
 					<object class="IBUIButton" id="520408427">
 						<reference key="NSNextResponder" ref="239111351"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{123, 353}, {75, 37}}</string>
+						<string key="NSFrame">{{123, 274}, {75, 37}}</string>
 						<reference key="NSSuperview" ref="239111351"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -74,7 +73,7 @@
 					<object class="IBUIButton" id="989031851">
 						<reference key="NSNextResponder" ref="239111351"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{56, 92}, {208, 40}}</string>
+						<string key="NSFrame">{{56, 82}, {208, 40}}</string>
 						<reference key="NSSuperview" ref="239111351"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="980361741"/>
@@ -97,7 +96,7 @@
 					<object class="IBUIButton" id="747249065">
 						<reference key="NSNextResponder" ref="239111351"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{56, 28}, {208, 40}}</string>
+						<string key="NSFrame">{{56, 34}, {208, 40}}</string>
 						<reference key="NSSuperview" ref="239111351"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="989031851"/>
@@ -120,7 +119,7 @@
 					<object class="IBUIButton" id="980361741">
 						<reference key="NSNextResponder" ref="239111351"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{56, 155}, {208, 40}}</string>
+						<string key="NSFrame">{{56, 130}, {208, 40}}</string>
 						<reference key="NSSuperview" ref="239111351"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1010459055"/>
@@ -143,7 +142,7 @@
 					<object class="IBUIButton" id="1010459055">
 						<reference key="NSNextResponder" ref="239111351"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{56, 219}, {208, 40}}</string>
+						<string key="NSFrame">{{56, 178}, {208, 40}}</string>
 						<reference key="NSSuperview" ref="239111351"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1007605599"/>
@@ -166,7 +165,7 @@
 					<object class="IBUIButton" id="1007605599">
 						<reference key="NSNextResponder" ref="239111351"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{56, 283}, {208, 40}}</string>
+						<string key="NSFrame">{{56, 226}, {208, 40}}</string>
 						<reference key="NSSuperview" ref="239111351"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="520408427"/>
@@ -220,12 +219,57 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">displayEditCuisine:</string>
+						<string key="label">editCuisine:</string>
 						<reference key="source" ref="989031851"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">24</int>
+					<int key="connectionID">26</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">editMenu:</string>
+						<reference key="source" ref="980361741"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">4</int>
+					</object>
+					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">editMenu:</string>
+						<reference key="source" ref="980361741"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">30</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">editSchedule:</string>
+						<reference key="source" ref="1010459055"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">29</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">editContactInfo:</string>
+						<reference key="source" ref="1007605599"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">editTweet:</string>
+						<reference key="source" ref="747249065"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">28</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -251,12 +295,12 @@
 						<int key="objectID">9</int>
 						<reference key="object" ref="239111351"/>
 						<array class="NSMutableArray" key="children">
+							<reference ref="747249065"/>
+							<reference ref="989031851"/>
+							<reference ref="980361741"/>
+							<reference ref="1010459055"/>
 							<reference ref="1007605599"/>
 							<reference ref="520408427"/>
-							<reference ref="1010459055"/>
-							<reference ref="980361741"/>
-							<reference ref="989031851"/>
-							<reference ref="747249065"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -309,20 +353,48 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">24</int>
+			<int key="maxID">30</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">TOSettingsViewController</string>
+					<string key="className">SettingsViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/SettingsViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">TOSettingsViewController</string>
+					<string key="superclassName">SettingsViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="displayEditCuisine:">id</string>
+						<string key="editContactInfo:">id</string>
+						<string key="editCuisine:">id</string>
+						<string key="editMenu:">id</string>
+						<string key="editSchedule:">id</string>
+						<string key="editTweet:">id</string>
 						<string key="logout:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="displayEditCuisine:">
-							<string key="name">displayEditCuisine:</string>
+						<object class="IBActionInfo" key="editContactInfo:">
+							<string key="name">editContactInfo:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="editCuisine:">
+							<string key="name">editCuisine:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="editMenu:">
+							<string key="name">editMenu:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="editSchedule:">
+							<string key="name">editSchedule:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="editTweet:">
+							<string key="name">editTweet:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="logout:">

@@ -13,7 +13,7 @@
 @synthesize email, password, type, userFavoritesList;
 
 
-+ (id)personWithEmail:(NSString *)email password:(NSString *)password type:(NSString *)type userFavoritesList:(NSMutableArray *)userFavoritesList
++ (id)personWithEmail:(NSString *)email password:(NSString *)password type:(NSString *)type userFavoritesList:(NSMutableArray *)userFavoritesList 
 {
 	Person *newPerson = [[[self alloc] init] autorelease];
 	newPerson.email = email;

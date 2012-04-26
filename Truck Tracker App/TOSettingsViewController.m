@@ -9,14 +9,11 @@
 #import "TOSettingsViewController.h"
 #import "Truck_Tracker_AppAppDelegate.h"
 
-#import "TrucksViewController.h"
-#import "BlockPartyViewController.h"
-#import "MapViewController.h"
-#import "MapViewController.h"
-#import "FavoritesViewController.h"
-#import "UserSettingsViewController.h"
-
+#import "EditTweetViewController.h"
 #import "TOEditCuisineViewController.h"
+#import "EditMenuViewController.h"
+#import "EditScheduleViewController.h"
+#import "EditContactInfoViewController.h"
 
 @interface TOSettingsViewController ()
 
@@ -63,13 +60,57 @@
 
 #pragma mark - Buttons
 
--(IBAction)displayEditCuisine:(id)sender
+-(IBAction)editTweet:(id)sender
+{
+    EditTweetViewController *detailsViewController = [[EditTweetViewController alloc] initWithNibName:@"EditTweetView" bundle:nil];
+    
+    
+    detailsViewController.title = @"Edit Tweet";
+    
+    [[self navigationController] pushViewController:detailsViewController animated:YES];
+    [detailsViewController release];
+}
+
+-(IBAction)editCuisine:(id)sender
 {
     TOEditCuisineViewController *detailsViewController = [[TOEditCuisineViewController alloc] initWithNibName:@"TOEditCuisineView" bundle:nil];
         
         
     detailsViewController.title = @"Edit Cuisine";
         
+    [[self navigationController] pushViewController:detailsViewController animated:YES];
+    [detailsViewController release];
+}
+
+-(IBAction)editMenu:(id)sender
+{
+    EditMenuViewController *detailsViewController = [[EditMenuViewController alloc] initWithNibName:@"EditMenuView" bundle:nil];
+    
+    
+    detailsViewController.title = @"Edit Menu";
+    
+    [[self navigationController] pushViewController:detailsViewController animated:YES];
+    [detailsViewController release];
+}
+
+-(IBAction)editSchedule:(id)sender
+{
+    EditScheduleViewController *detailsViewController = [[EditScheduleViewController alloc] initWithNibName:@"EditScheduleView" bundle:nil];
+    
+    
+    detailsViewController.title = @"Edit Schedule";
+    
+    [[self navigationController] pushViewController:detailsViewController animated:YES];
+    [detailsViewController release];
+}
+
+-(IBAction)editContactInfo:(id)sender
+{
+    EditContactInfoViewController *detailsViewController = [[EditContactInfoViewController alloc] initWithNibName:@"EditContactInfoView" bundle:nil];
+    
+    
+    detailsViewController.title = @"Edit Contact Info";
+    
     [[self navigationController] pushViewController:detailsViewController animated:YES];
     [detailsViewController release];
 }
