@@ -87,13 +87,13 @@
 {
     //Create person, check to see if person is in database, if yes display alert, if no add person and dismiss modal view
     
-    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text];
+    Person *selectedPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text userFavoritesList:[[NSMutableArray alloc] init]];
     
     if (![((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listUsers containsObject:
          selectedPerson])
         
     {
-        Person *newPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text]; 
+        Person *newPerson = [Person personWithEmail:controller.usernameTextField.text password:controller.passwordTextField.text type:controller.typeTextField.text userFavoritesList:[[NSMutableArray alloc] init]]; 
         
         [((Truck_Tracker_AppAppDelegate *)UIApplication.sharedApplication.delegate).listUsers addObject:newPerson];
         
